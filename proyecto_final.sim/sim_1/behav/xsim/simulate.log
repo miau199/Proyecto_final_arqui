@@ -1,0 +1,29 @@
+Time resolution is 1 ps
+[T=26000 ns] PC = 0x00000004 | Instr = 0x00a00113
+[T=36000 ns] PC = 0x00000008 | Instr = 0x002081b3
+[T=46000 ns] PC = 0x0000000c | Instr = 0x40118233
+[T=56000 ns] PC = 0x00000010 | Instr = 0x00200863
+[T=66000 ns] PC = 0x00000014 | Instr = 0x00108093
+[T=76000 ns] PC = 0x00000018 | Instr = 0x0040a023
+[DMEM WRITE] Addr: 0x00000006 (Word: 1) <= Data: 0x0000000a (10)
+[T=86000 ns] PC = 0x0000001c | Instr = 0x0000a283
+[T=96000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=106000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=116000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=126000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=136000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=146000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=156000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=166000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=176000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=186000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=196000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=206000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=216000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=226000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=236000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=246000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=256000 ns] PC = 0x00000020 | Instr = 0x0000006f
+[T=266000 ns] PC = 0x00000020 | Instr = 0x0000006f
+--- Simulacion completada ---
+$finish called at time : 266 ns : File "C:/vivadoProjects/proyecto_final/proyecto_final.srcs/sim_1/new/riscv_tb.sv" Line 60
