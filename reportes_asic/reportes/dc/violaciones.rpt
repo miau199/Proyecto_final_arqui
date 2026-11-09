@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : riscv_single_cycle
+Version: X-2025.06-SP5-5
+Date   : Wed Nov  4 19:16:32 2026
+****************************************
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   riscv_single_cycle           0.00       15102.19       -15102.19 (VIOLATED)
+
+
+1

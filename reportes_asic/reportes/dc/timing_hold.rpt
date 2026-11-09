@@ -1,0 +1,208 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 5
+Design : riscv_single_cycle
+Version: X-2025.06-SP5-5
+Date   : Wed Nov  4 19:16:32 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: 25CTT3P3   Library: M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_14__12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_14__12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  reg_file           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_datapath/u_reg_file/rf_reg_14__12_/CK (DFFRBQX1AS7)
+                                                          0.00 #     0.00 r
+  u_datapath/u_reg_file/rf_reg_14__12_/Q (DFFRBQX1AS7)
+                                                          0.50       0.50 r
+  u_datapath/u_reg_file/U3192/O (AOI22B2X1AS7)            0.21       0.71 r
+  u_datapath/u_reg_file/rf_reg_14__12_/D (DFFRBQX1AS7)
+                                                          0.00       0.71 r
+  data arrival time                                                  0.71
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.30       0.30
+  u_datapath/u_reg_file/rf_reg_14__12_/CK (DFFRBQX1AS7)
+                                                          0.00       0.30 r
+  library hold time                                      -0.04       0.26
+  data required time                                                 0.26
+  --------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_14__11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_14__11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  reg_file           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_datapath/u_reg_file/rf_reg_14__11_/CK (DFFRBQX1AS7)
+                                                          0.00 #     0.00 r
+  u_datapath/u_reg_file/rf_reg_14__11_/Q (DFFRBQX1AS7)
+                                                          0.50       0.50 r
+  u_datapath/u_reg_file/U3193/O (AOI22B2X1AS7)            0.21       0.71 r
+  u_datapath/u_reg_file/rf_reg_14__11_/D (DFFRBQX1AS7)
+                                                          0.00       0.71 r
+  data arrival time                                                  0.71
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.30       0.30
+  u_datapath/u_reg_file/rf_reg_14__11_/CK (DFFRBQX1AS7)
+                                                          0.00       0.30 r
+  library hold time                                      -0.04       0.26
+  data required time                                                 0.26
+  --------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_14__10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_14__10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  reg_file           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_datapath/u_reg_file/rf_reg_14__10_/CK (DFFRBQX1AS7)
+                                                          0.00 #     0.00 r
+  u_datapath/u_reg_file/rf_reg_14__10_/Q (DFFRBQX1AS7)
+                                                          0.50       0.50 r
+  u_datapath/u_reg_file/U3194/O (AOI22B2X1AS7)            0.21       0.71 r
+  u_datapath/u_reg_file/rf_reg_14__10_/D (DFFRBQX1AS7)
+                                                          0.00       0.71 r
+  data arrival time                                                  0.71
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.30       0.30
+  u_datapath/u_reg_file/rf_reg_14__10_/CK (DFFRBQX1AS7)
+                                                          0.00       0.30 r
+  library hold time                                      -0.04       0.26
+  data required time                                                 0.26
+  --------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_14__9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_14__9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  reg_file           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_datapath/u_reg_file/rf_reg_14__9_/CK (DFFRBQX1AS7)
+                                                          0.00 #     0.00 r
+  u_datapath/u_reg_file/rf_reg_14__9_/Q (DFFRBQX1AS7)     0.50       0.50 r
+  u_datapath/u_reg_file/U3195/O (AOI22B2X1AS7)            0.21       0.71 r
+  u_datapath/u_reg_file/rf_reg_14__9_/D (DFFRBQX1AS7)     0.00       0.71 r
+  data arrival time                                                  0.71
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.30       0.30
+  u_datapath/u_reg_file/rf_reg_14__9_/CK (DFFRBQX1AS7)
+                                                          0.00       0.30 r
+  library hold time                                      -0.04       0.26
+  data required time                                                 0.26
+  --------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_14__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_14__8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  reg_file           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_datapath/u_reg_file/rf_reg_14__8_/CK (DFFRBQX1AS7)
+                                                          0.00 #     0.00 r
+  u_datapath/u_reg_file/rf_reg_14__8_/Q (DFFRBQX1AS7)     0.50       0.50 r
+  u_datapath/u_reg_file/U3196/O (AOI22B2X1AS7)            0.21       0.71 r
+  u_datapath/u_reg_file/rf_reg_14__8_/D (DFFRBQX1AS7)     0.00       0.71 r
+  data arrival time                                                  0.71
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.30       0.30
+  u_datapath/u_reg_file/rf_reg_14__8_/CK (DFFRBQX1AS7)
+                                                          0.00       0.30 r
+  library hold time                                      -0.04       0.26
+  data required time                                                 0.26
+  --------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+1

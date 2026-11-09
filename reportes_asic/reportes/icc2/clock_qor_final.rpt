@@ -1,0 +1,36 @@
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+****************************************
+Report : clock qor
+        -type summary
+Design : riscv_single_cycle
+Version: Y-2026.03-SP2
+Date   : Wed Nov  4 19:49:22 2026
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+==========================================
+==== Summary Reporting for Corner typ ====
+==========================================
+
+============================================================= Summary Table for Corner typ =============================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func_typ
+clk                                     M,D      1024      3       26    956.39    956.39      0.73      0.28         0         0  11819.60
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                       1024      3       26    956.39    956.39      0.73      0.28         0         0  11819.60
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+1

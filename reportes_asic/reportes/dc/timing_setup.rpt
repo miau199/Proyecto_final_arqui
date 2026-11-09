@@ -1,0 +1,1776 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+Design : riscv_single_cycle
+Version: X-2025.06-SP5-5
+Date   : Wed Nov  4 19:16:32 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: 25CTT3P3   Library: M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+Wire Load Model Mode: enclosed
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[0]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  datapath           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 r
+  instr_i[0] (in)                                         0.06      0.01       4.01 r
+  instr_i[0] (net)                              1                   0.00       4.01 r
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 r
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 r
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.06      0.00       4.01 r
+  u_control_unit/U7/O (AND2X1AS7)                         0.17      0.21       4.22 r
+  u_control_unit/n8 (net)                       3                   0.00       4.22 r
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.17      0.00       4.22 r
+  u_control_unit/U13/O (NAND3X1AS7)                       0.19      0.15       4.37 f
+  u_control_unit/n4 (net)                       2                   0.00       4.37 f
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.19      0.00       4.37 f
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.28      0.30       4.67 f
+  u_control_unit/n30 (net)                      6                   0.00       4.67 f
+  u_control_unit/U18/C2 (OAI112X2AS7)                     0.28      0.00       4.67 f
+  u_control_unit/U18/O (OAI112X2AS7)                      1.22      0.77       5.44 r
+  u_control_unit/alu_src_o (net)               29                   0.00       5.44 r
+  u_control_unit/alu_src_o (control_unit)                           0.00       5.44 r
+  alu_src (net)                                                     0.00       5.44 r
+  u_datapath/alu_src_i (datapath)                                   0.00       5.44 r
+  u_datapath/alu_src_i (net)                                        0.00       5.44 r
+  u_datapath/U7/I (CLKBUFX2AS7)                           1.22      0.00       5.44 r
+  u_datapath/U7/O (CLKBUFX2AS7)                           0.74      0.67       6.12 r
+  u_datapath/n323 (net)                        28                   0.00       6.12 r
+  u_datapath/U3/S (MUX2X1AS7)                             0.74      0.00       6.12 r
+  u_datapath/U3/O (MUX2X1AS7)                             0.47      0.68       6.80 f
+  u_datapath/src_b[0] (net)                    20                   0.00       6.80 f
+  u_datapath/u_alu/b_i[0] (alu)                                     0.00       6.80 f
+  u_datapath/u_alu/b_i[0] (net)                                     0.00       6.80 f
+  u_datapath/u_alu/U18/I2 (OR2X2AS7)                      0.47      0.00       6.80 f
+  u_datapath/u_alu/U18/O (OR2X2AS7)                       0.26      0.48       7.27 f
+  u_datapath/u_alu/n1 (net)                    16                   0.00       7.27 f
+  u_datapath/u_alu/U164/I (INVX3AS7)                      0.26      0.00       7.27 f
+  u_datapath/u_alu/U164/O (INVX3AS7)                      0.55      0.40       7.67 r
+  u_datapath/u_alu/n970 (net)                  35                   0.00       7.67 r
+  u_datapath/u_alu/U1051/A1 (AOI112X1AS7)                 0.55      0.00       7.67 r
+  u_datapath/u_alu/U1051/O (AOI112X1AS7)                  0.25      0.07       7.74 f
+  u_datapath/u_alu/n974 (net)                   1                   0.00       7.74 f
+  u_datapath/u_alu/U1053/B1 (AOI22X1AS7)                  0.25      0.00       7.74 f
+  u_datapath/u_alu/U1053/O (AOI22X1AS7)                   0.32      0.26       8.00 r
+  u_datapath/u_alu/n976 (net)                   1                   0.00       8.00 r
+  u_datapath/u_alu/U1054/B2 (OAI22X1AS7)                  0.32      0.00       8.00 r
+  u_datapath/u_alu/U1054/O (OAI22X1AS7)                   0.24      0.17       8.17 f
+  u_datapath/u_alu/n979 (net)                   2                   0.00       8.17 f
+  u_datapath/u_alu/U1055/C2 (AOI222X1AS7)                 0.24      0.00       8.17 f
+  u_datapath/u_alu/U1055/O (AOI222X1AS7)                  0.74      0.60       8.76 r
+  u_datapath/u_alu/n982 (net)                   2                   0.00       8.76 r
+  u_datapath/u_alu/U1057/C1 (AOI222X1AS7)                 0.74      0.00       8.76 r
+  u_datapath/u_alu/U1057/O (AOI222X1AS7)                  0.44      0.27       9.03 f
+  u_datapath/u_alu/n983 (net)                   2                   0.00       9.03 f
+  u_datapath/u_alu/U1058/C2 (AOI222X1AS7)                 0.44      0.00       9.03 f
+  u_datapath/u_alu/U1058/O (AOI222X1AS7)                  0.63      0.56       9.59 r
+  u_datapath/u_alu/n986 (net)                   1                   0.00       9.59 r
+  u_datapath/u_alu/U1059/A2 (OAI22X1AS7)                  0.63      0.00       9.59 r
+  u_datapath/u_alu/U1059/O (OAI22X1AS7)                   0.27      0.20       9.79 f
+  u_datapath/u_alu/n988 (net)                   2                   0.00       9.79 f
+  u_datapath/u_alu/U1060/C2 (AOI222X1AS7)                 0.27      0.00       9.79 f
+  u_datapath/u_alu/U1060/O (AOI222X1AS7)                  0.74      0.60      10.40 r
+  u_datapath/u_alu/n991 (net)                   2                   0.00      10.40 r
+  u_datapath/u_alu/U1062/C1 (AOI222X1AS7)                 0.74      0.00      10.40 r
+  u_datapath/u_alu/U1062/O (AOI222X1AS7)                  0.44      0.27      10.67 f
+  u_datapath/u_alu/n992 (net)                   2                   0.00      10.67 f
+  u_datapath/u_alu/U1063/C2 (AOI222X1AS7)                 0.44      0.00      10.67 f
+  u_datapath/u_alu/U1063/O (AOI222X1AS7)                  0.62      0.55      11.22 r
+  u_datapath/u_alu/n996 (net)                   1                   0.00      11.22 r
+  u_datapath/u_alu/U1064/A1 (OAI22X1AS7)                  0.62      0.00      11.22 r
+  u_datapath/u_alu/U1064/O (OAI22X1AS7)                   0.20      0.14      11.36 f
+  u_datapath/u_alu/n997 (net)                   1                   0.00      11.36 f
+  u_datapath/u_alu/U1065/A1 (OAI12X1AS7)                  0.20      0.00      11.36 f
+  u_datapath/u_alu/U1065/O (OAI12X1AS7)                   0.30      0.12      11.47 r
+  u_datapath/u_alu/n999 (net)                   1                   0.00      11.47 r
+  u_datapath/u_alu/U1066/B1 (OAI112X1AS7)                 0.30      0.00      11.47 r
+  u_datapath/u_alu/U1066/O (OAI112X1AS7)                  0.19      0.15      11.63 f
+  u_datapath/u_alu/n1002 (net)                  1                   0.00      11.63 f
+  u_datapath/u_alu/U1067/A1 (OAI12X1AS7)                  0.19      0.00      11.63 f
+  u_datapath/u_alu/U1067/O (OAI12X1AS7)                   0.37      0.14      11.77 r
+  u_datapath/u_alu/n1005 (net)                  2                   0.00      11.77 r
+  u_datapath/u_alu/U1069/C1 (AOI222X1AS7)                 0.37      0.00      11.77 r
+  u_datapath/u_alu/U1069/O (AOI222X1AS7)                  0.33      0.20      11.96 f
+  u_datapath/u_alu/n1007 (net)                  1                   0.00      11.96 f
+  u_datapath/u_alu/U1070/B1 (AOI22X1AS7)                  0.33      0.00      11.96 f
+  u_datapath/u_alu/U1070/O (AOI22X1AS7)                   0.30      0.26      12.23 r
+  u_datapath/u_alu/n1011 (net)                  1                   0.00      12.23 r
+  u_datapath/u_alu/U1071/I2 (NOR4X1AS7)                   0.30      0.00      12.23 r
+  u_datapath/u_alu/U1071/O (NOR4X1AS7)                    0.16      0.09      12.32 f
+  u_datapath/u_alu/n1019 (net)                  1                   0.00      12.32 f
+  u_datapath/u_alu/U1074/B2 (OAI13X1AS7)                  0.16      0.00      12.32 f
+  u_datapath/u_alu/U1074/O (OAI13X1AS7)                   0.42      0.33      12.64 r
+  u_datapath/u_alu/n1021 (net)                  1                   0.00      12.64 r
+  u_datapath/u_alu/U1075/B1 (OAI112X1AS7)                 0.42      0.00      12.64 r
+  u_datapath/u_alu/U1075/O (OAI112X1AS7)                  0.29      0.19      12.84 f
+  u_datapath/u_alu/n1025 (net)                  2                   0.00      12.84 f
+  u_datapath/u_alu/U21/C2 (AOI222X1AS7)                   0.29      0.00      12.84 f
+  u_datapath/u_alu/U21/O (AOI222X1AS7)                    0.74      0.61      13.45 r
+  u_datapath/u_alu/n1028 (net)                  2                   0.00      13.45 r
+  u_datapath/u_alu/U1076/C1 (AOI222X1AS7)                 0.74      0.00      13.45 r
+  u_datapath/u_alu/U1076/O (AOI222X1AS7)                  0.41      0.23      13.68 f
+  u_datapath/u_alu/n1029 (net)                  1                   0.00      13.68 f
+  u_datapath/u_alu/U1077/A1 (OAI12X1AS7)                  0.41      0.00      13.68 f
+  u_datapath/u_alu/U1077/O (OAI12X1AS7)                   0.29      0.16      13.84 r
+  u_datapath/u_alu/n1032 (net)                  1                   0.00      13.84 r
+  u_datapath/u_alu/U1078/B1 (AOI22X1AS7)                  0.29      0.00      13.84 r
+  u_datapath/u_alu/U1078/O (AOI22X1AS7)                   0.21      0.15      13.99 f
+  u_datapath/u_alu/n1035 (net)                  1                   0.00      13.99 f
+  u_datapath/u_alu/U1079/A2 (OAI22X1AS7)                  0.21      0.00      13.99 f
+  u_datapath/u_alu/U1079/O (OAI22X1AS7)                   0.41      0.19      14.18 r
+  u_datapath/u_alu/n1037 (net)                  1                   0.00      14.18 r
+  u_datapath/u_alu/U1080/B1 (OAI112X1AS7)                 0.41      0.00      14.18 r
+  u_datapath/u_alu/U1080/O (OAI112X1AS7)                  0.20      0.16      14.34 f
+  u_datapath/u_alu/n1040 (net)                  1                   0.00      14.34 f
+  u_datapath/u_alu/U1081/A1 (OAI12X1AS7)                  0.20      0.00      14.34 f
+  u_datapath/u_alu/U1081/O (OAI12X1AS7)                   0.35      0.14      14.48 r
+  u_datapath/u_alu/n1043 (net)                  2                   0.00      14.48 r
+  u_datapath/u_alu/U1082/C1 (AOI222X1AS7)                 0.35      0.00      14.48 r
+  u_datapath/u_alu/U1082/O (AOI222X1AS7)                  0.34      0.20      14.68 f
+  u_datapath/u_alu/n1045 (net)                  1                   0.00      14.68 f
+  u_datapath/u_alu/U12/I1 (NOR2X1AS7)                     0.34      0.00      14.68 f
+  u_datapath/u_alu/U12/O (NOR2X1AS7)                      0.21      0.21      14.89 r
+  u_datapath/u_alu/n1046 (net)                  1                   0.00      14.89 r
+  u_datapath/u_alu/U30/B1 (AOI112X1AS7)                   0.21      0.00      14.89 r
+  u_datapath/u_alu/U30/O (AOI112X1AS7)                    0.18      0.08      14.97 f
+  u_datapath/u_alu/n1050 (net)                  1                   0.00      14.97 f
+  u_datapath/u_alu/U34/B1 (AOI112X1AS7)                   0.18      0.00      14.97 f
+  u_datapath/u_alu/U34/O (AOI112X1AS7)                    0.52      0.38      15.35 r
+  u_datapath/u_alu/n1065 (net)                  2                   0.00      15.35 r
+  u_datapath/u_alu/U15/I (INVX1AS7)                       0.52      0.00      15.35 r
+  u_datapath/u_alu/U15/O (INVX1AS7)                       0.45      0.35      15.70 f
+  u_datapath/u_alu/result_o[0] (net)            2                   0.00      15.70 f
+  u_datapath/u_alu/result_o[0] (alu)                                0.00      15.70 f
+  u_datapath/alu_result_o[0] (net)                                  0.00      15.70 f
+  u_datapath/alu_result_o[0] (datapath)                             0.00      15.70 f
+  dmem_addr_o[0] (net)                                              0.00      15.70 f
+  dmem_addr_o[0] (out)                                    0.45      0.00      15.70 f
+  data arrival time                                                           15.70
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -15.70
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[31]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)                      0.19      0.31      14.32 r
+  u_datapath/u_alu/n739 (net)                   1                   0.00      14.32 r
+  u_datapath/u_alu/U928/CI (FAX1AS7)                      0.19      0.00      14.32 r
+  u_datapath/u_alu/U928/CO (FAX1AS7)                      0.19      0.31      14.64 r
+  u_datapath/u_alu/n771 (net)                   1                   0.00      14.64 r
+  u_datapath/u_alu/U946/CI (FAX1AS7)                      0.19      0.00      14.64 r
+  u_datapath/u_alu/U946/CO (FAX1AS7)                      0.13      0.27      14.90 r
+  u_datapath/u_alu/n775 (net)                   1                   0.00      14.90 r
+  u_datapath/u_alu/U949/I1 (XOR2X1AS7)                    0.13      0.00      14.90 r
+  u_datapath/u_alu/U949/O (XOR2X1AS7)                     0.12      0.35      15.26 f
+  u_datapath/u_alu/n776 (net)                   1                   0.00      15.26 f
+  u_datapath/u_alu/U950/I1 (NAND2X2AS7)                   0.12      0.00      15.26 f
+  u_datapath/u_alu/U950/O (NAND2X2AS7)                    0.35      0.12      15.38 r
+  u_datapath/u_alu/n798 (net)                   1                   0.00      15.38 r
+  u_datapath/u_alu/U962/A1 (OAI112X4AS7)                  0.35      0.00      15.38 r
+  u_datapath/u_alu/U962/O (OAI112X4AS7)                   0.43      0.29      15.67 f
+  u_datapath/u_alu/result_o[31] (net)           4                   0.00      15.67 f
+  u_datapath/u_alu/result_o[31] (alu)                               0.00      15.67 f
+  u_datapath/alu_result_o[31] (net)                                 0.00      15.67 f
+  u_datapath/alu_result_o[31] (datapath)                            0.00      15.67 f
+  dmem_addr_o[31] (net)                                             0.00      15.67 f
+  dmem_addr_o[31] (out)                                   0.43      0.00      15.67 f
+  data arrival time                                                           15.67
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -15.67
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.03
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[30]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)                      0.19      0.31      14.32 r
+  u_datapath/u_alu/n739 (net)                   1                   0.00      14.32 r
+  u_datapath/u_alu/U928/CI (FAX1AS7)                      0.19      0.00      14.32 r
+  u_datapath/u_alu/U928/CO (FAX1AS7)                      0.19      0.31      14.64 r
+  u_datapath/u_alu/n771 (net)                   1                   0.00      14.64 r
+  u_datapath/u_alu/U946/CI (FAX1AS7)                      0.19      0.00      14.64 r
+  u_datapath/u_alu/U946/S (FAX1AS7)                       0.12      0.59      15.22 r
+  u_datapath/u_alu/n736 (net)                   1                   0.00      15.22 r
+  u_datapath/u_alu/U11/B1 (AOI12X1AS7)                    0.12      0.00      15.22 r
+  u_datapath/u_alu/U11/O (AOI12X1AS7)                     0.40      0.15      15.37 f
+  u_datapath/u_alu/n737 (net)                   1                   0.00      15.37 f
+  u_datapath/u_alu/U6/I (INVX3AS7)                        0.40      0.00      15.37 f
+  u_datapath/u_alu/U6/O (INVX3AS7)                        0.34      0.30      15.67 r
+  u_datapath/u_alu/result_o[30] (net)           4                   0.00      15.67 r
+  u_datapath/u_alu/result_o[30] (alu)                               0.00      15.67 r
+  u_datapath/alu_result_o[30] (net)                                 0.00      15.67 r
+  u_datapath/alu_result_o[30] (datapath)                            0.00      15.67 r
+  dmem_addr_o[30] (net)                                             0.00      15.67 r
+  dmem_addr_o[30] (out)                                   0.34      0.00      15.67 r
+  data arrival time                                                           15.67
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -15.67
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.03
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[29]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)                      0.19      0.31      14.32 r
+  u_datapath/u_alu/n739 (net)                   1                   0.00      14.32 r
+  u_datapath/u_alu/U928/CI (FAX1AS7)                      0.19      0.00      14.32 r
+  u_datapath/u_alu/U928/S (FAX1AS7)                       0.13      0.59      14.91 r
+  u_datapath/u_alu/n740 (net)                   1                   0.00      14.91 r
+  u_datapath/u_alu/U14/I (INVX1AS7)                       0.13      0.00      14.91 r
+  u_datapath/u_alu/U14/O (INVX1AS7)                       0.07      0.06      14.98 f
+  u_datapath/u_alu/n769 (net)                   1                   0.00      14.98 f
+  u_datapath/u_alu/U13/C1 (OAI112X2AS7)                   0.07      0.00      14.98 f
+  u_datapath/u_alu/U13/O (OAI112X2AS7)                    0.93      0.55      15.53 r
+  u_datapath/u_alu/result_o[29] (net)           4                   0.00      15.53 r
+  u_datapath/u_alu/result_o[29] (alu)                               0.00      15.53 r
+  u_datapath/alu_result_o[29] (net)                                 0.00      15.53 r
+  u_datapath/alu_result_o[29] (datapath)                            0.00      15.53 r
+  dmem_addr_o[29] (net)                                             0.00      15.53 r
+  dmem_addr_o[29] (out)                                   0.93      0.00      15.53 r
+  data arrival time                                                           15.53
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -15.53
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.17
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[28]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/S (FAX1AS7)                       0.12      0.59      14.60 r
+  u_datapath/u_alu/n78 (net)                    1                   0.00      14.60 r
+  u_datapath/u_alu/U10/B1B (OAI12B2X1AS7)                 0.12      0.00      14.60 r
+  u_datapath/u_alu/U10/O (OAI12B2X1AS7)                   0.89      0.61      15.21 r
+  u_datapath/u_alu/result_o[28] (net)           4                   0.00      15.21 r
+  u_datapath/u_alu/result_o[28] (alu)                               0.00      15.21 r
+  u_datapath/alu_result_o[28] (net)                                 0.00      15.21 r
+  u_datapath/alu_result_o[28] (datapath)                            0.00      15.21 r
+  dmem_addr_o[28] (net)                                             0.00      15.21 r
+  dmem_addr_o[28] (out)                                   0.89      0.00      15.21 r
+  data arrival time                                                           15.21
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -15.21
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.49
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: dmem_addr_o[27]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/S (FAX1AS7)                       0.12      0.59      14.29 r
+  u_datapath/u_alu/n380 (net)                   1                   0.00      14.29 r
+  u_datapath/u_alu/U9/B1B (OAI12B2X1AS7)                  0.12      0.00      14.29 r
+  u_datapath/u_alu/U9/O (OAI12B2X1AS7)                    0.90      0.61      14.90 r
+  u_datapath/u_alu/result_o[27] (net)           4                   0.00      14.90 r
+  u_datapath/u_alu/result_o[27] (alu)                               0.00      14.90 r
+  u_datapath/alu_result_o[27] (net)                                 0.00      14.90 r
+  u_datapath/alu_result_o[27] (datapath)                            0.00      14.90 r
+  dmem_addr_o[27] (net)                                             0.00      14.90 r
+  dmem_addr_o[27] (out)                                   0.90      0.00      14.90 r
+  data arrival time                                                           14.90
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  output external delay                                            -4.00      15.70
+  data required time                                                          15.70
+  ------------------------------------------------------------------------------------
+  data required time                                                          15.70
+  data arrival time                                                          -14.90
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.80
+
+
+  Startpoint: instr_i[5] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_31_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  imm_extend         MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  datapath           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 r
+  instr_i[5] (in)                                         0.14      0.06       4.06 r
+  instr_i[5] (net)                              4                   0.00       4.06 r
+  u_control_unit/opcode_i[5] (control_unit)                         0.00       4.06 r
+  u_control_unit/opcode_i[5] (net)                                  0.00       4.06 r
+  u_control_unit/U5/I (INVX1AS7)                          0.14      0.00       4.06 r
+  u_control_unit/U5/O (INVX1AS7)                          0.10      0.09       4.15 f
+  u_control_unit/n26 (net)                      3                   0.00       4.15 f
+  u_control_unit/U6/I1 (NOR2X1AS7)                        0.10      0.00       4.15 f
+  u_control_unit/U6/O (NOR2X1AS7)                         0.18      0.14       4.29 r
+  u_control_unit/n2 (net)                       1                   0.00       4.29 r
+  u_control_unit/U9/I1 (NAND3X1AS7)                       0.18      0.00       4.29 r
+  u_control_unit/U9/O (NAND3X1AS7)                        0.34      0.24       4.52 f
+  u_control_unit/jump_o_BAR (net)               5                   0.00       4.52 f
+  u_control_unit/U47/I (INVX1AS7)                         0.34      0.00       4.52 f
+  u_control_unit/U47/O (INVX1AS7)                         0.12      0.14       4.66 r
+  u_control_unit/n32 (net)                      1                   0.00       4.66 r
+  u_control_unit/U48/I1 (NAND2X1AS7)                      0.12      0.00       4.66 r
+  u_control_unit/U48/O (NAND2X1AS7)                       0.12      0.10       4.77 f
+  u_control_unit/n34 (net)                      2                   0.00       4.77 f
+  u_control_unit/U50/I1 (NAND2B1X1AS7)                    0.12      0.00       4.77 f
+  u_control_unit/U50/O (NAND2B1X1AS7)                     0.21      0.15       4.92 r
+  u_control_unit/imm_src_o[1] (net)             3                   0.00       4.92 r
+  u_control_unit/imm_src_o[1] (control_unit)                        0.00       4.92 r
+  imm_src[1] (net)                                                  0.00       4.92 r
+  u_datapath/imm_src_i[1] (datapath)                                0.00       4.92 r
+  u_datapath/imm_src_i[1] (net)                                     0.00       4.92 r
+  u_datapath/u_imm_extend/imm_src_i[1] (imm_extend)                 0.00       4.92 r
+  u_datapath/u_imm_extend/imm_src_i[1] (net)                        0.00       4.92 r
+  u_datapath/u_imm_extend/U5/I (INVX1AS7)                 0.21      0.00       4.92 r
+  u_datapath/u_imm_extend/U5/O (INVX1AS7)                 0.12      0.10       5.01 f
+  u_datapath/u_imm_extend/n7 (net)              3                   0.00       5.01 f
+  u_datapath/u_imm_extend/U6/I2 (NAND2X1AS7)              0.12      0.00       5.01 f
+  u_datapath/u_imm_extend/U6/O (NAND2X1AS7)               0.21      0.16       5.18 r
+  u_datapath/u_imm_extend/n27 (net)             3                   0.00       5.18 r
+  u_datapath/u_imm_extend/U16/I (INVX1AS7)                0.21      0.00       5.18 r
+  u_datapath/u_imm_extend/U16/O (INVX1AS7)                0.09      0.07       5.25 f
+  u_datapath/u_imm_extend/n12 (net)             2                   0.00       5.25 f
+  u_datapath/u_imm_extend/U17/I1 (NAND2X1AS7)             0.09      0.00       5.25 f
+  u_datapath/u_imm_extend/U17/O (NAND2X1AS7)              0.13      0.09       5.34 r
+  u_datapath/u_imm_extend/n4 (net)              1                   0.00       5.34 r
+  u_datapath/u_imm_extend/U19/B1 (AOI12X1AS7)             0.13      0.00       5.34 r
+  u_datapath/u_imm_extend/U19/O (AOI12X1AS7)              0.36      0.17       5.51 f
+  u_datapath/u_imm_extend/imm_ext_o[0] (net)
+                                                4                   0.00       5.51 f
+  u_datapath/u_imm_extend/imm_ext_o[0] (imm_extend)                 0.00       5.51 f
+  u_datapath/imm_ext[0] (net)                                       0.00       5.51 f
+  u_datapath/U232/I1 (NAND2X1AS7)                         0.36      0.00       5.51 f
+  u_datapath/U232/O (NAND2X1AS7)                          0.26      0.21       5.73 r
+  u_datapath/n218 (net)                         3                   0.00       5.73 r
+  u_datapath/U239/I (INVX1AS7)                            0.26      0.00       5.73 r
+  u_datapath/U239/O (INVX1AS7)                            0.09      0.06       5.78 f
+  u_datapath/n217 (net)                         1                   0.00       5.78 f
+  u_datapath/U240/I2 (NAND2X1AS7)                         0.09      0.00       5.78 f
+  u_datapath/U240/O (NAND2X1AS7)                          0.17      0.13       5.92 r
+  u_datapath/n223 (net)                         2                   0.00       5.92 r
+  u_datapath/U246/I (INVX1AS7)                            0.17      0.00       5.92 r
+  u_datapath/U246/O (INVX1AS7)                            0.07      0.05       5.97 f
+  u_datapath/n224 (net)                         1                   0.00       5.97 f
+  u_datapath/U247/A1 (AOI12X1AS7)                         0.07      0.00       5.97 f
+  u_datapath/U247/O (AOI12X1AS7)                          0.40      0.25       6.22 r
+  u_datapath/n292 (net)                         2                   0.00       6.22 r
+  u_datapath/U313/A1 (OAI22B2X1AS7)                       0.40      0.00       6.22 r
+  u_datapath/U313/O (OAI22B2X1AS7)                        0.19      0.14       6.36 f
+  u_datapath/intadd_0_CI (net)                  1                   0.00       6.36 f
+  u_datapath/intadd_0_U29/CI (FAX1AS7)                    0.19      0.00       6.36 f
+  u_datapath/intadd_0_U29/CO (FAX1AS7)                    0.19      0.41       6.77 f
+  u_datapath/intadd_0_n28 (net)                 1                   0.00       6.77 f
+  u_datapath/intadd_0_U28/CI (FAX1AS7)                    0.19      0.00       6.77 f
+  u_datapath/intadd_0_U28/CO (FAX1AS7)                    0.19      0.41       7.19 f
+  u_datapath/intadd_0_n27 (net)                 1                   0.00       7.19 f
+  u_datapath/intadd_0_U27/CI (FAX1AS7)                    0.19      0.00       7.19 f
+  u_datapath/intadd_0_U27/CO (FAX1AS7)                    0.19      0.41       7.60 f
+  u_datapath/intadd_0_n26 (net)                 1                   0.00       7.60 f
+  u_datapath/intadd_0_U26/CI (FAX1AS7)                    0.19      0.00       7.60 f
+  u_datapath/intadd_0_U26/CO (FAX1AS7)                    0.19      0.41       8.01 f
+  u_datapath/intadd_0_n25 (net)                 1                   0.00       8.01 f
+  u_datapath/intadd_0_U25/CI (FAX1AS7)                    0.19      0.00       8.01 f
+  u_datapath/intadd_0_U25/CO (FAX1AS7)                    0.19      0.41       8.42 f
+  u_datapath/intadd_0_n24 (net)                 1                   0.00       8.42 f
+  u_datapath/intadd_0_U24/CI (FAX1AS7)                    0.19      0.00       8.42 f
+  u_datapath/intadd_0_U24/CO (FAX1AS7)                    0.19      0.41       8.83 f
+  u_datapath/intadd_0_n23 (net)                 1                   0.00       8.83 f
+  u_datapath/intadd_0_U23/CI (FAX1AS7)                    0.19      0.00       8.83 f
+  u_datapath/intadd_0_U23/CO (FAX1AS7)                    0.19      0.41       9.24 f
+  u_datapath/intadd_0_n22 (net)                 1                   0.00       9.24 f
+  u_datapath/intadd_0_U22/CI (FAX1AS7)                    0.19      0.00       9.24 f
+  u_datapath/intadd_0_U22/CO (FAX1AS7)                    0.19      0.41       9.65 f
+  u_datapath/intadd_0_n21 (net)                 1                   0.00       9.65 f
+  u_datapath/intadd_0_U21/CI (FAX1AS7)                    0.19      0.00       9.65 f
+  u_datapath/intadd_0_U21/CO (FAX1AS7)                    0.19      0.41      10.07 f
+  u_datapath/intadd_0_n20 (net)                 1                   0.00      10.07 f
+  u_datapath/intadd_0_U20/CI (FAX1AS7)                    0.19      0.00      10.07 f
+  u_datapath/intadd_0_U20/CO (FAX1AS7)                    0.19      0.41      10.48 f
+  u_datapath/intadd_0_n19 (net)                 1                   0.00      10.48 f
+  u_datapath/intadd_0_U19/CI (FAX1AS7)                    0.19      0.00      10.48 f
+  u_datapath/intadd_0_U19/CO (FAX1AS7)                    0.19      0.41      10.89 f
+  u_datapath/intadd_0_n18 (net)                 1                   0.00      10.89 f
+  u_datapath/intadd_0_U18/CI (FAX1AS7)                    0.19      0.00      10.89 f
+  u_datapath/intadd_0_U18/CO (FAX1AS7)                    0.19      0.41      11.30 f
+  u_datapath/intadd_0_n17 (net)                 1                   0.00      11.30 f
+  u_datapath/intadd_0_U17/CI (FAX1AS7)                    0.19      0.00      11.30 f
+  u_datapath/intadd_0_U17/CO (FAX1AS7)                    0.19      0.41      11.71 f
+  u_datapath/intadd_0_n16 (net)                 1                   0.00      11.71 f
+  u_datapath/intadd_0_U16/CI (FAX1AS7)                    0.19      0.00      11.71 f
+  u_datapath/intadd_0_U16/CO (FAX1AS7)                    0.19      0.41      12.12 f
+  u_datapath/intadd_0_n15 (net)                 1                   0.00      12.12 f
+  u_datapath/intadd_0_U15/CI (FAX1AS7)                    0.19      0.00      12.12 f
+  u_datapath/intadd_0_U15/CO (FAX1AS7)                    0.19      0.41      12.54 f
+  u_datapath/intadd_0_n14 (net)                 1                   0.00      12.54 f
+  u_datapath/intadd_0_U14/CI (FAX1AS7)                    0.19      0.00      12.54 f
+  u_datapath/intadd_0_U14/CO (FAX1AS7)                    0.19      0.41      12.95 f
+  u_datapath/intadd_0_n13 (net)                 1                   0.00      12.95 f
+  u_datapath/intadd_0_U13/CI (FAX1AS7)                    0.19      0.00      12.95 f
+  u_datapath/intadd_0_U13/CO (FAX1AS7)                    0.19      0.41      13.36 f
+  u_datapath/intadd_0_n12 (net)                 1                   0.00      13.36 f
+  u_datapath/intadd_0_U12/CI (FAX1AS7)                    0.19      0.00      13.36 f
+  u_datapath/intadd_0_U12/CO (FAX1AS7)                    0.19      0.41      13.77 f
+  u_datapath/intadd_0_n11 (net)                 1                   0.00      13.77 f
+  u_datapath/intadd_0_U11/CI (FAX1AS7)                    0.19      0.00      13.77 f
+  u_datapath/intadd_0_U11/CO (FAX1AS7)                    0.19      0.41      14.18 f
+  u_datapath/intadd_0_n10 (net)                 1                   0.00      14.18 f
+  u_datapath/intadd_0_U10/CI (FAX1AS7)                    0.19      0.00      14.18 f
+  u_datapath/intadd_0_U10/CO (FAX1AS7)                    0.19      0.41      14.59 f
+  u_datapath/intadd_0_n9 (net)                  1                   0.00      14.59 f
+  u_datapath/intadd_0_U9/CI (FAX1AS7)                     0.19      0.00      14.59 f
+  u_datapath/intadd_0_U9/CO (FAX1AS7)                     0.19      0.41      15.01 f
+  u_datapath/intadd_0_n8 (net)                  1                   0.00      15.01 f
+  u_datapath/intadd_0_U8/CI (FAX1AS7)                     0.19      0.00      15.01 f
+  u_datapath/intadd_0_U8/CO (FAX1AS7)                     0.19      0.41      15.42 f
+  u_datapath/intadd_0_n7 (net)                  1                   0.00      15.42 f
+  u_datapath/intadd_0_U7/CI (FAX1AS7)                     0.19      0.00      15.42 f
+  u_datapath/intadd_0_U7/CO (FAX1AS7)                     0.19      0.41      15.83 f
+  u_datapath/intadd_0_n6 (net)                  1                   0.00      15.83 f
+  u_datapath/intadd_0_U6/CI (FAX1AS7)                     0.19      0.00      15.83 f
+  u_datapath/intadd_0_U6/CO (FAX1AS7)                     0.19      0.41      16.24 f
+  u_datapath/intadd_0_n5 (net)                  1                   0.00      16.24 f
+  u_datapath/intadd_0_U5/CI (FAX1AS7)                     0.19      0.00      16.24 f
+  u_datapath/intadd_0_U5/CO (FAX1AS7)                     0.19      0.41      16.65 f
+  u_datapath/intadd_0_n4 (net)                  1                   0.00      16.65 f
+  u_datapath/intadd_0_U4/CI (FAX1AS7)                     0.19      0.00      16.65 f
+  u_datapath/intadd_0_U4/CO (FAX1AS7)                     0.19      0.41      17.06 f
+  u_datapath/intadd_0_n3 (net)                  1                   0.00      17.06 f
+  u_datapath/intadd_0_U3/CI (FAX1AS7)                     0.19      0.00      17.06 f
+  u_datapath/intadd_0_U3/CO (FAX1AS7)                     0.19      0.41      17.48 f
+  u_datapath/intadd_0_n2 (net)                  1                   0.00      17.48 f
+  u_datapath/intadd_0_U2/CI (FAX1AS7)                     0.19      0.00      17.48 f
+  u_datapath/intadd_0_U2/CO (FAX1AS7)                     0.18      0.40      17.88 f
+  u_datapath/intadd_0_n1 (net)                  1                   0.00      17.88 f
+  u_datapath/U317/I3 (XNOR3X1AS7)                         0.18      0.00      17.88 f
+  u_datapath/U317/O (XNOR3X1AS7)                          0.13      0.29      18.17 r
+  u_datapath/n299 (net)                         1                   0.00      18.17 r
+  u_datapath/U318/B2 (OAI222X1AS7)                        0.13      0.00      18.17 r
+  u_datapath/U318/O (OAI222X1AS7)                         0.40      0.22      18.39 f
+  u_datapath/n140 (net)                         1                   0.00      18.39 f
+  u_datapath/pc_o_reg_31_/D (DFFRBQX1AS7)                 0.40      0.00      18.39 f
+  data arrival time                                                           18.39
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  u_datapath/pc_o_reg_31_/CK (DFFRBQX1AS7)                          0.00      19.70 r
+  library setup time                                               -0.38      19.32
+  data required time                                                          19.32
+  ------------------------------------------------------------------------------------
+  data required time                                                          19.32
+  data arrival time                                                          -18.39
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.93
+
+
+  Startpoint: instr_i[5] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_30_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  imm_extend         MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  datapath           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 r
+  instr_i[5] (in)                                         0.14      0.06       4.06 r
+  instr_i[5] (net)                              4                   0.00       4.06 r
+  u_control_unit/opcode_i[5] (control_unit)                         0.00       4.06 r
+  u_control_unit/opcode_i[5] (net)                                  0.00       4.06 r
+  u_control_unit/U5/I (INVX1AS7)                          0.14      0.00       4.06 r
+  u_control_unit/U5/O (INVX1AS7)                          0.10      0.09       4.15 f
+  u_control_unit/n26 (net)                      3                   0.00       4.15 f
+  u_control_unit/U6/I1 (NOR2X1AS7)                        0.10      0.00       4.15 f
+  u_control_unit/U6/O (NOR2X1AS7)                         0.18      0.14       4.29 r
+  u_control_unit/n2 (net)                       1                   0.00       4.29 r
+  u_control_unit/U9/I1 (NAND3X1AS7)                       0.18      0.00       4.29 r
+  u_control_unit/U9/O (NAND3X1AS7)                        0.34      0.24       4.52 f
+  u_control_unit/jump_o_BAR (net)               5                   0.00       4.52 f
+  u_control_unit/U47/I (INVX1AS7)                         0.34      0.00       4.52 f
+  u_control_unit/U47/O (INVX1AS7)                         0.12      0.14       4.66 r
+  u_control_unit/n32 (net)                      1                   0.00       4.66 r
+  u_control_unit/U48/I1 (NAND2X1AS7)                      0.12      0.00       4.66 r
+  u_control_unit/U48/O (NAND2X1AS7)                       0.12      0.10       4.77 f
+  u_control_unit/n34 (net)                      2                   0.00       4.77 f
+  u_control_unit/U50/I1 (NAND2B1X1AS7)                    0.12      0.00       4.77 f
+  u_control_unit/U50/O (NAND2B1X1AS7)                     0.21      0.15       4.92 r
+  u_control_unit/imm_src_o[1] (net)             3                   0.00       4.92 r
+  u_control_unit/imm_src_o[1] (control_unit)                        0.00       4.92 r
+  imm_src[1] (net)                                                  0.00       4.92 r
+  u_datapath/imm_src_i[1] (datapath)                                0.00       4.92 r
+  u_datapath/imm_src_i[1] (net)                                     0.00       4.92 r
+  u_datapath/u_imm_extend/imm_src_i[1] (imm_extend)                 0.00       4.92 r
+  u_datapath/u_imm_extend/imm_src_i[1] (net)                        0.00       4.92 r
+  u_datapath/u_imm_extend/U5/I (INVX1AS7)                 0.21      0.00       4.92 r
+  u_datapath/u_imm_extend/U5/O (INVX1AS7)                 0.12      0.10       5.01 f
+  u_datapath/u_imm_extend/n7 (net)              3                   0.00       5.01 f
+  u_datapath/u_imm_extend/U6/I2 (NAND2X1AS7)              0.12      0.00       5.01 f
+  u_datapath/u_imm_extend/U6/O (NAND2X1AS7)               0.21      0.16       5.18 r
+  u_datapath/u_imm_extend/n27 (net)             3                   0.00       5.18 r
+  u_datapath/u_imm_extend/U16/I (INVX1AS7)                0.21      0.00       5.18 r
+  u_datapath/u_imm_extend/U16/O (INVX1AS7)                0.09      0.07       5.25 f
+  u_datapath/u_imm_extend/n12 (net)             2                   0.00       5.25 f
+  u_datapath/u_imm_extend/U17/I1 (NAND2X1AS7)             0.09      0.00       5.25 f
+  u_datapath/u_imm_extend/U17/O (NAND2X1AS7)              0.13      0.09       5.34 r
+  u_datapath/u_imm_extend/n4 (net)              1                   0.00       5.34 r
+  u_datapath/u_imm_extend/U19/B1 (AOI12X1AS7)             0.13      0.00       5.34 r
+  u_datapath/u_imm_extend/U19/O (AOI12X1AS7)              0.36      0.17       5.51 f
+  u_datapath/u_imm_extend/imm_ext_o[0] (net)
+                                                4                   0.00       5.51 f
+  u_datapath/u_imm_extend/imm_ext_o[0] (imm_extend)                 0.00       5.51 f
+  u_datapath/imm_ext[0] (net)                                       0.00       5.51 f
+  u_datapath/U232/I1 (NAND2X1AS7)                         0.36      0.00       5.51 f
+  u_datapath/U232/O (NAND2X1AS7)                          0.26      0.21       5.73 r
+  u_datapath/n218 (net)                         3                   0.00       5.73 r
+  u_datapath/U239/I (INVX1AS7)                            0.26      0.00       5.73 r
+  u_datapath/U239/O (INVX1AS7)                            0.09      0.06       5.78 f
+  u_datapath/n217 (net)                         1                   0.00       5.78 f
+  u_datapath/U240/I2 (NAND2X1AS7)                         0.09      0.00       5.78 f
+  u_datapath/U240/O (NAND2X1AS7)                          0.17      0.13       5.92 r
+  u_datapath/n223 (net)                         2                   0.00       5.92 r
+  u_datapath/U246/I (INVX1AS7)                            0.17      0.00       5.92 r
+  u_datapath/U246/O (INVX1AS7)                            0.07      0.05       5.97 f
+  u_datapath/n224 (net)                         1                   0.00       5.97 f
+  u_datapath/U247/A1 (AOI12X1AS7)                         0.07      0.00       5.97 f
+  u_datapath/U247/O (AOI12X1AS7)                          0.40      0.25       6.22 r
+  u_datapath/n292 (net)                         2                   0.00       6.22 r
+  u_datapath/U313/A1 (OAI22B2X1AS7)                       0.40      0.00       6.22 r
+  u_datapath/U313/O (OAI22B2X1AS7)                        0.19      0.14       6.36 f
+  u_datapath/intadd_0_CI (net)                  1                   0.00       6.36 f
+  u_datapath/intadd_0_U29/CI (FAX1AS7)                    0.19      0.00       6.36 f
+  u_datapath/intadd_0_U29/CO (FAX1AS7)                    0.19      0.41       6.77 f
+  u_datapath/intadd_0_n28 (net)                 1                   0.00       6.77 f
+  u_datapath/intadd_0_U28/CI (FAX1AS7)                    0.19      0.00       6.77 f
+  u_datapath/intadd_0_U28/CO (FAX1AS7)                    0.19      0.41       7.19 f
+  u_datapath/intadd_0_n27 (net)                 1                   0.00       7.19 f
+  u_datapath/intadd_0_U27/CI (FAX1AS7)                    0.19      0.00       7.19 f
+  u_datapath/intadd_0_U27/CO (FAX1AS7)                    0.19      0.41       7.60 f
+  u_datapath/intadd_0_n26 (net)                 1                   0.00       7.60 f
+  u_datapath/intadd_0_U26/CI (FAX1AS7)                    0.19      0.00       7.60 f
+  u_datapath/intadd_0_U26/CO (FAX1AS7)                    0.19      0.41       8.01 f
+  u_datapath/intadd_0_n25 (net)                 1                   0.00       8.01 f
+  u_datapath/intadd_0_U25/CI (FAX1AS7)                    0.19      0.00       8.01 f
+  u_datapath/intadd_0_U25/CO (FAX1AS7)                    0.19      0.41       8.42 f
+  u_datapath/intadd_0_n24 (net)                 1                   0.00       8.42 f
+  u_datapath/intadd_0_U24/CI (FAX1AS7)                    0.19      0.00       8.42 f
+  u_datapath/intadd_0_U24/CO (FAX1AS7)                    0.19      0.41       8.83 f
+  u_datapath/intadd_0_n23 (net)                 1                   0.00       8.83 f
+  u_datapath/intadd_0_U23/CI (FAX1AS7)                    0.19      0.00       8.83 f
+  u_datapath/intadd_0_U23/CO (FAX1AS7)                    0.19      0.41       9.24 f
+  u_datapath/intadd_0_n22 (net)                 1                   0.00       9.24 f
+  u_datapath/intadd_0_U22/CI (FAX1AS7)                    0.19      0.00       9.24 f
+  u_datapath/intadd_0_U22/CO (FAX1AS7)                    0.19      0.41       9.65 f
+  u_datapath/intadd_0_n21 (net)                 1                   0.00       9.65 f
+  u_datapath/intadd_0_U21/CI (FAX1AS7)                    0.19      0.00       9.65 f
+  u_datapath/intadd_0_U21/CO (FAX1AS7)                    0.19      0.41      10.07 f
+  u_datapath/intadd_0_n20 (net)                 1                   0.00      10.07 f
+  u_datapath/intadd_0_U20/CI (FAX1AS7)                    0.19      0.00      10.07 f
+  u_datapath/intadd_0_U20/CO (FAX1AS7)                    0.19      0.41      10.48 f
+  u_datapath/intadd_0_n19 (net)                 1                   0.00      10.48 f
+  u_datapath/intadd_0_U19/CI (FAX1AS7)                    0.19      0.00      10.48 f
+  u_datapath/intadd_0_U19/CO (FAX1AS7)                    0.19      0.41      10.89 f
+  u_datapath/intadd_0_n18 (net)                 1                   0.00      10.89 f
+  u_datapath/intadd_0_U18/CI (FAX1AS7)                    0.19      0.00      10.89 f
+  u_datapath/intadd_0_U18/CO (FAX1AS7)                    0.19      0.41      11.30 f
+  u_datapath/intadd_0_n17 (net)                 1                   0.00      11.30 f
+  u_datapath/intadd_0_U17/CI (FAX1AS7)                    0.19      0.00      11.30 f
+  u_datapath/intadd_0_U17/CO (FAX1AS7)                    0.19      0.41      11.71 f
+  u_datapath/intadd_0_n16 (net)                 1                   0.00      11.71 f
+  u_datapath/intadd_0_U16/CI (FAX1AS7)                    0.19      0.00      11.71 f
+  u_datapath/intadd_0_U16/CO (FAX1AS7)                    0.19      0.41      12.12 f
+  u_datapath/intadd_0_n15 (net)                 1                   0.00      12.12 f
+  u_datapath/intadd_0_U15/CI (FAX1AS7)                    0.19      0.00      12.12 f
+  u_datapath/intadd_0_U15/CO (FAX1AS7)                    0.19      0.41      12.54 f
+  u_datapath/intadd_0_n14 (net)                 1                   0.00      12.54 f
+  u_datapath/intadd_0_U14/CI (FAX1AS7)                    0.19      0.00      12.54 f
+  u_datapath/intadd_0_U14/CO (FAX1AS7)                    0.19      0.41      12.95 f
+  u_datapath/intadd_0_n13 (net)                 1                   0.00      12.95 f
+  u_datapath/intadd_0_U13/CI (FAX1AS7)                    0.19      0.00      12.95 f
+  u_datapath/intadd_0_U13/CO (FAX1AS7)                    0.19      0.41      13.36 f
+  u_datapath/intadd_0_n12 (net)                 1                   0.00      13.36 f
+  u_datapath/intadd_0_U12/CI (FAX1AS7)                    0.19      0.00      13.36 f
+  u_datapath/intadd_0_U12/CO (FAX1AS7)                    0.19      0.41      13.77 f
+  u_datapath/intadd_0_n11 (net)                 1                   0.00      13.77 f
+  u_datapath/intadd_0_U11/CI (FAX1AS7)                    0.19      0.00      13.77 f
+  u_datapath/intadd_0_U11/CO (FAX1AS7)                    0.19      0.41      14.18 f
+  u_datapath/intadd_0_n10 (net)                 1                   0.00      14.18 f
+  u_datapath/intadd_0_U10/CI (FAX1AS7)                    0.19      0.00      14.18 f
+  u_datapath/intadd_0_U10/CO (FAX1AS7)                    0.19      0.41      14.59 f
+  u_datapath/intadd_0_n9 (net)                  1                   0.00      14.59 f
+  u_datapath/intadd_0_U9/CI (FAX1AS7)                     0.19      0.00      14.59 f
+  u_datapath/intadd_0_U9/CO (FAX1AS7)                     0.19      0.41      15.01 f
+  u_datapath/intadd_0_n8 (net)                  1                   0.00      15.01 f
+  u_datapath/intadd_0_U8/CI (FAX1AS7)                     0.19      0.00      15.01 f
+  u_datapath/intadd_0_U8/CO (FAX1AS7)                     0.19      0.41      15.42 f
+  u_datapath/intadd_0_n7 (net)                  1                   0.00      15.42 f
+  u_datapath/intadd_0_U7/CI (FAX1AS7)                     0.19      0.00      15.42 f
+  u_datapath/intadd_0_U7/CO (FAX1AS7)                     0.19      0.41      15.83 f
+  u_datapath/intadd_0_n6 (net)                  1                   0.00      15.83 f
+  u_datapath/intadd_0_U6/CI (FAX1AS7)                     0.19      0.00      15.83 f
+  u_datapath/intadd_0_U6/CO (FAX1AS7)                     0.19      0.41      16.24 f
+  u_datapath/intadd_0_n5 (net)                  1                   0.00      16.24 f
+  u_datapath/intadd_0_U5/CI (FAX1AS7)                     0.19      0.00      16.24 f
+  u_datapath/intadd_0_U5/CO (FAX1AS7)                     0.19      0.41      16.65 f
+  u_datapath/intadd_0_n4 (net)                  1                   0.00      16.65 f
+  u_datapath/intadd_0_U4/CI (FAX1AS7)                     0.19      0.00      16.65 f
+  u_datapath/intadd_0_U4/CO (FAX1AS7)                     0.19      0.41      17.06 f
+  u_datapath/intadd_0_n3 (net)                  1                   0.00      17.06 f
+  u_datapath/intadd_0_U3/CI (FAX1AS7)                     0.19      0.00      17.06 f
+  u_datapath/intadd_0_U3/CO (FAX1AS7)                     0.19      0.41      17.48 f
+  u_datapath/intadd_0_n2 (net)                  1                   0.00      17.48 f
+  u_datapath/intadd_0_U2/CI (FAX1AS7)                     0.19      0.00      17.48 f
+  u_datapath/intadd_0_U2/S (FAX1AS7)                      0.17      0.54      18.02 f
+  u_datapath/intadd_0_SUM_27_ (net)             1                   0.00      18.02 f
+  u_datapath/U309/I (INVX1AS7)                            0.17      0.00      18.02 f
+  u_datapath/U309/O (INVX1AS7)                            0.10      0.10      18.12 r
+  u_datapath/n289 (net)                         1                   0.00      18.12 r
+  u_datapath/U311/B1 (OAI222X1AS7)                        0.10      0.00      18.12 r
+  u_datapath/U311/O (OAI222X1AS7)                         0.46      0.19      18.31 f
+  u_datapath/n141 (net)                         1                   0.00      18.31 f
+  u_datapath/pc_o_reg_30_/D (DFFRBQX1AS7)                 0.46      0.00      18.31 f
+  data arrival time                                                           18.31
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  u_datapath/pc_o_reg_30_/CK (DFFRBQX1AS7)                          0.00      19.70 r
+  library setup time                                               -0.40      19.30
+  data required time                                                          19.30
+  ------------------------------------------------------------------------------------
+  data required time                                                          19.30
+  data arrival time                                                          -18.31
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  1.00
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  datapath           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)                      0.19      0.31      14.32 r
+  u_datapath/u_alu/n739 (net)                   1                   0.00      14.32 r
+  u_datapath/u_alu/U928/CI (FAX1AS7)                      0.19      0.00      14.32 r
+  u_datapath/u_alu/U928/S (FAX1AS7)                       0.16      0.54      14.87 f
+  u_datapath/u_alu/n740 (net)                   1                   0.00      14.87 f
+  u_datapath/u_alu/U14/I (INVX1AS7)                       0.16      0.00      14.87 f
+  u_datapath/u_alu/U14/O (INVX1AS7)                       0.12      0.12      14.98 r
+  u_datapath/u_alu/n769 (net)                   1                   0.00      14.98 r
+  u_datapath/u_alu/U13/C1 (OAI112X2AS7)                   0.12      0.00      14.98 r
+  u_datapath/u_alu/U13/O (OAI112X2AS7)                    0.63      0.36      15.34 f
+  u_datapath/u_alu/result_o[29] (net)           4                   0.00      15.34 f
+  u_datapath/u_alu/U1092/I1 (OR4X1AS7)                    0.63      0.00      15.34 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)                     0.15      0.54      15.88 f
+  u_datapath/u_alu/n1060 (net)                  1                   0.00      15.88 f
+  u_datapath/u_alu/U1093/I2 (NOR4X1AS7)                   0.15      0.00      15.88 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)                    0.51      0.35      16.24 r
+  u_datapath/u_alu/n1062 (net)                  1                   0.00      16.24 r
+  u_datapath/u_alu/U1094/I4 (AND4X1AS7)                   0.51      0.00      16.24 r
+  u_datapath/u_alu/U1094/O (AND4X1AS7)                    0.17      0.34      16.57 r
+  u_datapath/u_alu/zero_o (net)                 1                   0.00      16.57 r
+  u_datapath/u_alu/zero_o (alu)                                     0.00      16.57 r
+  u_datapath/zero (net)                                             0.00      16.57 r
+  u_datapath/U229/I2 (XNOR2X1AS7)                         0.17      0.00      16.57 r
+  u_datapath/U229/O (XNOR2X1AS7)                          0.10      0.25      16.82 f
+  u_datapath/n214 (net)                         1                   0.00      16.82 f
+  u_datapath/U11/B1 (AOI12X1AS7)                          0.10      0.00      16.82 f
+  u_datapath/U11/O (AOI12X1AS7)                           0.39      0.27      17.09 r
+  u_datapath/n227 (net)                         3                   0.00      17.09 r
+  u_datapath/U235/I (INVX1AS7)                            0.39      0.00      17.09 r
+  u_datapath/U235/O (INVX1AS7)                            0.15      0.10      17.19 f
+  u_datapath/n231 (net)                         3                   0.00      17.19 f
+  u_datapath/U252/I1 (NAND2X1AS7)                         0.15      0.00      17.19 f
+  u_datapath/U252/O (NAND2X1AS7)                          0.42      0.26      17.45 r
+  u_datapath/n300 (net)                         7                   0.00      17.45 r
+  u_datapath/U10/I (INVX1AS7)                             0.42      0.00      17.45 r
+  u_datapath/U10/O (INVX1AS7)                             0.49      0.37      17.82 f
+  u_datapath/n294 (net)                        23                   0.00      17.82 f
+  u_datapath/U269/A1 (AOI22X1AS7)                         0.49      0.00      17.82 f
+  u_datapath/U269/O (AOI22X1AS7)                          0.44      0.29      18.11 r
+  u_datapath/n248 (net)                         1                   0.00      18.11 r
+  u_datapath/U270/A1 (OAI12X1AS7)                         0.44      0.00      18.11 r
+  u_datapath/U270/O (OAI12X1AS7)                          0.27      0.13      18.23 f
+  u_datapath/n159 (net)                         1                   0.00      18.23 f
+  u_datapath/pc_o_reg_12_/D (DFFRBQX1AS7)                 0.27      0.00      18.23 f
+  data arrival time                                                           18.23
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  u_datapath/pc_o_reg_12_/CK (DFFRBQX1AS7)                          0.00      19.70 r
+  library setup time                                               -0.36      19.34
+  data required time                                                          19.34
+  ------------------------------------------------------------------------------------
+  data required time                                                          19.34
+  data arrival time                                                          -18.23
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  1.11
+
+
+  Startpoint: instr_i[0] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_single_cycle MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  control_unit       MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  alu                MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+  datapath           MW0K                  M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              4.00       4.00 f
+  instr_i[0] (in)                                         0.05      0.01       4.01 f
+  instr_i[0] (net)                              1                   0.00       4.01 f
+  u_control_unit/opcode_i[0] (control_unit)                         0.00       4.01 f
+  u_control_unit/opcode_i[0] (net)                                  0.00       4.01 f
+  u_control_unit/U7/I2 (AND2X1AS7)                        0.05      0.00       4.01 f
+  u_control_unit/U7/O (AND2X1AS7)                         0.10      0.18       4.19 f
+  u_control_unit/n8 (net)                       3                   0.00       4.19 f
+  u_control_unit/U13/I1 (NAND3X1AS7)                      0.10      0.00       4.19 f
+  u_control_unit/U13/O (NAND3X1AS7)                       0.21      0.13       4.32 r
+  u_control_unit/n4 (net)                       2                   0.00       4.32 r
+  u_control_unit/U14/B2 (NAND2B1X1AS7)                    0.21      0.00       4.32 r
+  u_control_unit/U14/O (NAND2B1X1AS7)                     0.35      0.28       4.61 r
+  u_control_unit/n30 (net)                      6                   0.00       4.61 r
+  u_control_unit/U26/I1 (NOR2X1AS7)                       0.35      0.00       4.61 r
+  u_control_unit/U26/O (NOR2X1AS7)                        0.20      0.16       4.77 f
+  u_control_unit/alu_ctrl_o[1] (net)            6                   0.00       4.77 f
+  u_control_unit/alu_ctrl_o[1] (control_unit)                       0.00       4.77 f
+  alu_ctrl[1] (net)                                                 0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (datapath)                               0.00       4.77 f
+  u_datapath/alu_ctrl_i[1] (net)                                    0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (alu)                              0.00       4.77 f
+  u_datapath/u_alu/alu_ctrl_i[1] (net)                              0.00       4.77 f
+  u_datapath/u_alu/U38/I2 (NOR3X1AS7)                     0.20      0.00       4.77 f
+  u_datapath/u_alu/U38/O (NOR3X1AS7)                      0.33      0.26       5.03 r
+  u_datapath/u_alu/n4 (net)                     1                   0.00       5.03 r
+  u_datapath/u_alu/U35/I (CLKBUFX1AS7)                    0.33      0.00       5.03 r
+  u_datapath/u_alu/U35/O (CLKBUFX1AS7)                    1.49      0.96       5.99 r
+  u_datapath/u_alu/n935 (net)                  31                   0.00       5.99 r
+  u_datapath/u_alu/U29/I1 (AND2X1AS7)                     1.49      0.00       5.99 r
+  u_datapath/u_alu/U29/O (AND2X1AS7)                      1.51      1.02       7.02 r
+  u_datapath/u_alu/n772 (net)                  34                   0.00       7.02 r
+  u_datapath/u_alu/U42/I1 (XOR2X1AS7)                     1.51      0.00       7.02 r
+  u_datapath/u_alu/U42/O (XOR2X1AS7)                      0.19      0.69       7.70 r
+  u_datapath/u_alu/n933 (net)                   2                   0.00       7.70 r
+  u_datapath/u_alu/U46/B1 (AOI12X1AS7)                    0.19      0.00       7.70 r
+  u_datapath/u_alu/U46/O (AOI12X1AS7)                     0.17      0.13       7.84 f
+  u_datapath/u_alu/n519 (net)                   2                   0.00       7.84 f
+  u_datapath/u_alu/U48/B2 (OAI12X1AS7)                    0.17      0.00       7.84 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)                     0.43      0.31       8.15 r
+  u_datapath/u_alu/n586 (net)                   2                   0.00       8.15 r
+  u_datapath/u_alu/U53/B1 (AOI12X1AS7)                    0.43      0.00       8.15 r
+  u_datapath/u_alu/U53/O (AOI12X1AS7)                     0.24      0.18       8.33 f
+  u_datapath/u_alu/n423 (net)                   2                   0.00       8.33 f
+  u_datapath/u_alu/U57/B1 (OAI12X1AS7)                    0.24      0.00       8.33 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)                     0.44      0.33       8.65 r
+  u_datapath/u_alu/n570 (net)                   2                   0.00       8.65 r
+  u_datapath/u_alu/U62/B1 (AOI12X1AS7)                    0.44      0.00       8.65 r
+  u_datapath/u_alu/U62/O (AOI12X1AS7)                     0.24      0.18       8.83 f
+  u_datapath/u_alu/n495 (net)                   2                   0.00       8.83 f
+  u_datapath/u_alu/U66/B1 (OAI12X1AS7)                    0.24      0.00       8.83 f
+  u_datapath/u_alu/U66/O (OAI12X1AS7)                     0.44      0.33       9.16 r
+  u_datapath/u_alu/n614 (net)                   2                   0.00       9.16 r
+  u_datapath/u_alu/U71/B1 (AOI12X1AS7)                    0.44      0.00       9.16 r
+  u_datapath/u_alu/U71/O (AOI12X1AS7)                     0.26      0.20       9.36 f
+  u_datapath/u_alu/n404 (net)                   2                   0.00       9.36 f
+  u_datapath/u_alu/U75/B1 (OAI12X2AS7)                    0.26      0.00       9.36 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)                     0.28      0.23       9.59 r
+  u_datapath/u_alu/n305 (net)                   2                   0.00       9.59 r
+  u_datapath/u_alu/U80/B1 (AOI12X2AS7)                    0.28      0.00       9.59 r
+  u_datapath/u_alu/U80/O (AOI12X2AS7)                     0.15      0.12       9.71 f
+  u_datapath/u_alu/n333 (net)                   2                   0.00       9.71 f
+  u_datapath/u_alu/U84/B1 (OAI12X2AS7)                    0.15      0.00       9.71 f
+  u_datapath/u_alu/U84/O (OAI12X2AS7)                     0.27      0.20       9.91 r
+  u_datapath/u_alu/n187 (net)                   2                   0.00       9.91 r
+  u_datapath/u_alu/U89/B1 (AOI12X2AS7)                    0.27      0.00       9.91 r
+  u_datapath/u_alu/U89/O (AOI12X2AS7)                     0.14      0.11      10.02 f
+  u_datapath/u_alu/n216 (net)                   2                   0.00      10.02 f
+  u_datapath/u_alu/U23/B1 (OAI12X1AS7)                    0.14      0.00      10.02 f
+  u_datapath/u_alu/U23/O (OAI12X1AS7)                     0.43      0.30      10.32 r
+  u_datapath/u_alu/n386 (net)                   2                   0.00      10.32 r
+  u_datapath/u_alu/U31/B1 (AOI12X1AS7)                    0.43      0.00      10.32 r
+  u_datapath/u_alu/U31/O (AOI12X1AS7)                     0.25      0.20      10.52 f
+  u_datapath/u_alu/n155 (net)                   2                   0.00      10.52 f
+  u_datapath/u_alu/U100/B1 (OAI12X2AS7)                   0.25      0.00      10.52 f
+  u_datapath/u_alu/U100/O (OAI12X2AS7)                    0.25      0.22      10.73 r
+  u_datapath/u_alu/n254 (net)                   2                   0.00      10.73 r
+  u_datapath/u_alu/U24/B1 (AOI12X1AS7)                    0.25      0.00      10.73 r
+  u_datapath/u_alu/U24/O (AOI12X1AS7)                     0.20      0.16      10.90 f
+  u_datapath/u_alu/n686 (net)                   2                   0.00      10.90 f
+  u_datapath/u_alu/U32/B1 (OAI12X1AS7)                    0.20      0.00      10.90 f
+  u_datapath/u_alu/U32/O (OAI12X1AS7)                     0.48      0.34      11.24 r
+  u_datapath/u_alu/n124 (net)                   2                   0.00      11.24 r
+  u_datapath/u_alu/U112/B1 (AOI12X2AS7)                   0.48      0.00      11.24 r
+  u_datapath/u_alu/U112/O (AOI12X2AS7)                    0.17      0.12      11.36 f
+  u_datapath/u_alu/n804 (net)                   2                   0.00      11.36 f
+  u_datapath/u_alu/U33/B1 (OAI12X1AS7)                    0.17      0.00      11.36 f
+  u_datapath/u_alu/U33/O (OAI12X1AS7)                     0.48      0.34      11.69 r
+  u_datapath/u_alu/n885 (net)                   2                   0.00      11.69 r
+  u_datapath/u_alu/U120/B1 (AOI12X2AS7)                   0.48      0.00      11.69 r
+  u_datapath/u_alu/U120/O (AOI12X2AS7)                    0.18      0.13      11.82 f
+  u_datapath/u_alu/n859 (net)                   2                   0.00      11.82 f
+  u_datapath/u_alu/U124/B1 (OAI12X2AS7)                   0.18      0.00      11.82 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)                    0.25      0.20      12.02 r
+  u_datapath/u_alu/n830 (net)                   2                   0.00      12.02 r
+  u_datapath/u_alu/U25/B1 (AOI12X1AS7)                    0.25      0.00      12.02 r
+  u_datapath/u_alu/U25/O (AOI12X1AS7)                     0.20      0.16      12.18 f
+  u_datapath/u_alu/n667 (net)                   2                   0.00      12.18 f
+  u_datapath/u_alu/U26/B1 (OAI12X1AS7)                    0.20      0.00      12.18 f
+  u_datapath/u_alu/U26/O (OAI12X1AS7)                     0.48      0.34      12.52 r
+  u_datapath/u_alu/n448 (net)                   2                   0.00      12.52 r
+  u_datapath/u_alu/U136/B1 (AOI12X2AS7)                   0.48      0.00      12.52 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)                    0.17      0.12      12.64 f
+  u_datapath/u_alu/n644 (net)                   2                   0.00      12.64 f
+  u_datapath/u_alu/U27/B1 (OAI12X1AS7)                    0.17      0.00      12.64 f
+  u_datapath/u_alu/U27/O (OAI12X1AS7)                     0.48      0.34      12.97 r
+  u_datapath/u_alu/n471 (net)                   2                   0.00      12.97 r
+  u_datapath/u_alu/U144/B1 (AOI12X2AS7)                   0.48      0.00      12.97 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)                    0.17      0.12      13.09 f
+  u_datapath/u_alu/n275 (net)                   2                   0.00      13.09 f
+  u_datapath/u_alu/U28/B1 (OAI12X1AS7)                    0.17      0.00      13.09 f
+  u_datapath/u_alu/U28/O (OAI12X1AS7)                     0.38      0.28      13.36 r
+  u_datapath/u_alu/n87 (net)                    1                   0.00      13.36 r
+  u_datapath/u_alu/U266/CI (FAX1AS7)                      0.38      0.00      13.36 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)                      0.19      0.34      13.70 r
+  u_datapath/u_alu/n355 (net)                   1                   0.00      13.70 r
+  u_datapath/u_alu/U625/CI (FAX1AS7)                      0.19      0.00      13.70 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)                      0.19      0.31      14.01 r
+  u_datapath/u_alu/n710 (net)                   1                   0.00      14.01 r
+  u_datapath/u_alu/U909/CI (FAX1AS7)                      0.19      0.00      14.01 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)                      0.19      0.31      14.32 r
+  u_datapath/u_alu/n739 (net)                   1                   0.00      14.32 r
+  u_datapath/u_alu/U928/CI (FAX1AS7)                      0.19      0.00      14.32 r
+  u_datapath/u_alu/U928/S (FAX1AS7)                       0.16      0.54      14.87 f
+  u_datapath/u_alu/n740 (net)                   1                   0.00      14.87 f
+  u_datapath/u_alu/U14/I (INVX1AS7)                       0.16      0.00      14.87 f
+  u_datapath/u_alu/U14/O (INVX1AS7)                       0.12      0.12      14.98 r
+  u_datapath/u_alu/n769 (net)                   1                   0.00      14.98 r
+  u_datapath/u_alu/U13/C1 (OAI112X2AS7)                   0.12      0.00      14.98 r
+  u_datapath/u_alu/U13/O (OAI112X2AS7)                    0.63      0.36      15.34 f
+  u_datapath/u_alu/result_o[29] (net)           4                   0.00      15.34 f
+  u_datapath/u_alu/U1092/I1 (OR4X1AS7)                    0.63      0.00      15.34 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)                     0.15      0.54      15.88 f
+  u_datapath/u_alu/n1060 (net)                  1                   0.00      15.88 f
+  u_datapath/u_alu/U1093/I2 (NOR4X1AS7)                   0.15      0.00      15.88 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)                    0.51      0.35      16.24 r
+  u_datapath/u_alu/n1062 (net)                  1                   0.00      16.24 r
+  u_datapath/u_alu/U1094/I4 (AND4X1AS7)                   0.51      0.00      16.24 r
+  u_datapath/u_alu/U1094/O (AND4X1AS7)                    0.17      0.34      16.57 r
+  u_datapath/u_alu/zero_o (net)                 1                   0.00      16.57 r
+  u_datapath/u_alu/zero_o (alu)                                     0.00      16.57 r
+  u_datapath/zero (net)                                             0.00      16.57 r
+  u_datapath/U229/I2 (XNOR2X1AS7)                         0.17      0.00      16.57 r
+  u_datapath/U229/O (XNOR2X1AS7)                          0.10      0.25      16.82 f
+  u_datapath/n214 (net)                         1                   0.00      16.82 f
+  u_datapath/U11/B1 (AOI12X1AS7)                          0.10      0.00      16.82 f
+  u_datapath/U11/O (AOI12X1AS7)                           0.39      0.27      17.09 r
+  u_datapath/n227 (net)                         3                   0.00      17.09 r
+  u_datapath/U235/I (INVX1AS7)                            0.39      0.00      17.09 r
+  u_datapath/U235/O (INVX1AS7)                            0.15      0.10      17.19 f
+  u_datapath/n231 (net)                         3                   0.00      17.19 f
+  u_datapath/U252/I1 (NAND2X1AS7)                         0.15      0.00      17.19 f
+  u_datapath/U252/O (NAND2X1AS7)                          0.42      0.26      17.45 r
+  u_datapath/n300 (net)                         7                   0.00      17.45 r
+  u_datapath/U10/I (INVX1AS7)                             0.42      0.00      17.45 r
+  u_datapath/U10/O (INVX1AS7)                             0.49      0.37      17.82 f
+  u_datapath/n294 (net)                        23                   0.00      17.82 f
+  u_datapath/U275/A1 (AOI22X1AS7)                         0.49      0.00      17.82 f
+  u_datapath/U275/O (AOI22X1AS7)                          0.40      0.29      18.11 r
+  u_datapath/n254 (net)                         1                   0.00      18.11 r
+  u_datapath/U276/A1 (OAI12X1AS7)                         0.40      0.00      18.11 r
+  u_datapath/U276/O (OAI12X1AS7)                          0.27      0.12      18.23 f
+  u_datapath/n156 (net)                         1                   0.00      18.23 f
+  u_datapath/pc_o_reg_15_/D (DFFRBQX1AS7)                 0.27      0.00      18.23 f
+  data arrival time                                                           18.23
+
+  clock clk (rise edge)                                            20.00      20.00
+  clock network delay (ideal)                                       0.00      20.00
+  clock uncertainty                                                -0.30      19.70
+  u_datapath/pc_o_reg_15_/CK (DFFRBQX1AS7)                          0.00      19.70 r
+  library setup time                                               -0.36      19.34
+  data required time                                                          19.34
+  ------------------------------------------------------------------------------------
+  data required time                                                          19.34
+  data arrival time                                                          -18.23
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  1.11
+
+
+1

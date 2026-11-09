@@ -1,0 +1,26 @@
+****************************************
+Report : report_utilization
+Design : riscv_single_cycle
+Version: Y-2026.03-SP2
+Date   : Wed Nov  4 19:49:22 2026
+****************************************
+Utilization Ratio:			0.5624
+Utilization options:
+ - Area calculation based on:		site_row of block riscv_single_cycle
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				191003.9040
+Total Capacity Area:			191003.9040
+Total Area of cells:			107414.0928
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.5624
+
+0.5624

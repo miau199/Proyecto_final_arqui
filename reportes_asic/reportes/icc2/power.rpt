@@ -1,0 +1,51 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : riscv_single_cycle
+Version: Y-2026.03-SP2
+Date   : Wed Nov  4 19:49:22 2026
+****************************************
+Mode: func
+Corner: typ
+Scenario: func_typ
+Voltage: 3.30
+Temperature: 25.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 5.40e+09 pW ( 48.7%)
+  Net Switching Power    = 5.69e+09 pW ( 51.3%)
+Total Dynamic Power      = 1.11e+10 pW (100.0%)
+
+Cell Leakage Power       = 1.49e+04 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             5.20e+09               5.10e+09               3.59e+02               1.03e+10    ( 92.9%)        i
+register                  1.77e+07               3.36e+07               4.75e+03               5.12e+07    (  0.5%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             1.79e+08               5.61e+08               9.79e+03               7.40e+08    (  6.7%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     5.40e+09 pW            5.69e+09 pW            1.49e+04 pW            1.11e+10 pW
+1

@@ -1,0 +1,381 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -report_by design
+Design : riscv_single_cycle
+Version: Y-2026.03-SP2
+Date   : Wed Nov  4 19:49:22 2026
+****************************************
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_11__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_11__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+
+  u_datapath/u_reg_file/rf_reg_11__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  u_datapath/u_reg_file/rf_reg_11__16_/Q (DFFRBQX1AS7)
+                                                   0.56      1.01 r
+  u_datapath/u_reg_file/U3116/O (AOI22B2X1AS7)     0.24      1.24 r
+  u_datapath/u_reg_file/rf_reg_11__16_/D (DFFRBQX1AS7)
+                                                   0.00      1.24 r
+  data arrival time                                          1.24
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+  u_datapath/u_reg_file/rf_reg_11__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  clock uncertainty                                0.30      0.74
+  library hold time                               -0.01      0.73
+  data required time                                         0.73
+  ------------------------------------------------------------------------
+  data required time                                         0.73
+  data arrival time                                         -1.24
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.51
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_24__15_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_24__15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+
+  u_datapath/u_reg_file/rf_reg_24__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  u_datapath/u_reg_file/rf_reg_24__15_/Q (DFFRBQX1AS7)
+                                                   0.57      1.12 r
+  u_datapath/u_reg_file/U3429/O (AOI22B2X1AS7)     0.23      1.35 r
+  u_datapath/u_reg_file/rf_reg_24__15_/D (DFFRBQX1AS7)
+                                                   0.00      1.35 r
+  data arrival time                                          1.35
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+  u_datapath/u_reg_file/rf_reg_24__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  clock uncertainty                                0.30      0.85
+  library hold time                               -0.01      0.84
+  data required time                                         0.84
+  ------------------------------------------------------------------------
+  data required time                                         0.84
+  data arrival time                                         -1.35
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.51
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_11__15_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_11__15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+
+  u_datapath/u_reg_file/rf_reg_11__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  u_datapath/u_reg_file/rf_reg_11__15_/Q (DFFRBQX1AS7)
+                                                   0.57      1.01 r
+  u_datapath/u_reg_file/U3117/O (AOI22B2X1AS7)     0.23      1.24 r
+  u_datapath/u_reg_file/rf_reg_11__15_/D (DFFRBQX1AS7)
+                                                   0.00      1.24 r
+  data arrival time                                          1.24
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+  u_datapath/u_reg_file/rf_reg_11__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  clock uncertainty                                0.30      0.74
+  library hold time                               -0.01      0.73
+  data required time                                         0.73
+  ------------------------------------------------------------------------
+  data required time                                         0.73
+  data arrival time                                         -1.24
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.51
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_28__11_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_28__11_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+
+  u_datapath/u_reg_file/rf_reg_28__11_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  u_datapath/u_reg_file/rf_reg_28__11_/Q (DFFRBQX1AS7)
+                                                   0.57      1.11 r
+  u_datapath/u_reg_file/U3529/O (AOI22B2X1AS7)     0.22      1.33 r
+  u_datapath/u_reg_file/rf_reg_28__11_/D (DFFRBQX1AS7)
+                                                   0.00      1.33 r
+  data arrival time                                          1.33
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+  u_datapath/u_reg_file/rf_reg_28__11_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  clock uncertainty                                0.30      0.85
+  library hold time                               -0.03      0.82
+  data required time                                         0.82
+  ------------------------------------------------------------------------
+  data required time                                         0.82
+  data arrival time                                         -1.33
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.51
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_23__15_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_23__15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+
+  u_datapath/u_reg_file/rf_reg_23__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  u_datapath/u_reg_file/rf_reg_23__15_/Q (DFFRBQX1AS7)
+                                                   0.58      1.13 r
+  u_datapath/u_reg_file/U3405/O (AOI22B2X1AS7)     0.22      1.35 r
+  u_datapath/u_reg_file/rf_reg_23__15_/D (DFFRBQX1AS7)
+                                                   0.00      1.35 r
+  data arrival time                                          1.35
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+  u_datapath/u_reg_file/rf_reg_23__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  clock uncertainty                                0.30      0.85
+  library hold time                               -0.01      0.84
+  data required time                                         0.84
+  ------------------------------------------------------------------------
+  data required time                                         0.84
+  data arrival time                                         -1.35
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_21__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_21__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+
+  u_datapath/u_reg_file/rf_reg_21__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  u_datapath/u_reg_file/rf_reg_21__16_/Q (DFFRBQX1AS7)
+                                                   0.57      1.01 r
+  u_datapath/u_reg_file/U3356/O (AOI22B2X1AS7)     0.24      1.25 r
+  u_datapath/u_reg_file/rf_reg_21__16_/D (DFFRBQX1AS7)
+                                                   0.00      1.25 r
+  data arrival time                                          1.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+  u_datapath/u_reg_file/rf_reg_21__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  clock uncertainty                                0.30      0.74
+  library hold time                               -0.01      0.73
+  data required time                                         0.73
+  ------------------------------------------------------------------------
+  data required time                                         0.73
+  data arrival time                                         -1.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_28__15_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_28__15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.56      0.56
+
+  u_datapath/u_reg_file/rf_reg_28__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.56 r
+  u_datapath/u_reg_file/rf_reg_28__15_/Q (DFFRBQX1AS7)
+                                                   0.58      1.14 r
+  u_datapath/u_reg_file/U3525/O (AOI22B2X1AS7)     0.22      1.36 r
+  u_datapath/u_reg_file/rf_reg_28__15_/D (DFFRBQX1AS7)
+                                                   0.00      1.36 r
+  data arrival time                                          1.36
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.56      0.56
+  u_datapath/u_reg_file/rf_reg_28__15_/CK (DFFRBQX1AS7)
+                                                   0.00      0.56 r
+  clock uncertainty                                0.30      0.86
+  library hold time                               -0.02      0.84
+  data required time                                         0.84
+  ------------------------------------------------------------------------
+  data required time                                         0.84
+  data arrival time                                         -1.36
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_24__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_24__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.56      0.56
+
+  u_datapath/u_reg_file/rf_reg_24__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.56 r
+  u_datapath/u_reg_file/rf_reg_24__16_/Q (DFFRBQX1AS7)
+                                                   0.58      1.14 r
+  u_datapath/u_reg_file/U3428/O (AOI22B2X1AS7)     0.23      1.36 r
+  u_datapath/u_reg_file/rf_reg_24__16_/D (DFFRBQX1AS7)
+                                                   0.00      1.36 r
+  data arrival time                                          1.36
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.56      0.56
+  u_datapath/u_reg_file/rf_reg_24__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.56 r
+  clock uncertainty                                0.30      0.86
+  library hold time                               -0.01      0.85
+  data required time                                         0.85
+  ------------------------------------------------------------------------
+  data required time                                         0.85
+  data arrival time                                         -1.36
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_17__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_17__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+
+  u_datapath/u_reg_file/rf_reg_17__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  u_datapath/u_reg_file/rf_reg_17__16_/Q (DFFRBQX1AS7)
+                                                   0.58      1.13 r
+  u_datapath/u_reg_file/U3260/O (AOI22B2X1AS7)     0.23      1.36 r
+  u_datapath/u_reg_file/rf_reg_17__16_/D (DFFRBQX1AS7)
+                                                   0.00      1.36 r
+  data arrival time                                          1.36
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.55      0.55
+  u_datapath/u_reg_file/rf_reg_17__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.55 r
+  clock uncertainty                                0.30      0.85
+  library hold time                               -0.01      0.84
+  data required time                                         0.84
+  ------------------------------------------------------------------------
+  data required time                                         0.84
+  data arrival time                                         -1.36
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+
+  Startpoint: u_datapath/u_reg_file/rf_reg_9__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_reg_file/rf_reg_9__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+
+  u_datapath/u_reg_file/rf_reg_9__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  u_datapath/u_reg_file/rf_reg_9__16_/Q (DFFRBQX1AS7)
+                                                   0.58      1.03 r
+  u_datapath/u_reg_file/U3068/O (AOI22B2X1AS7)     0.23      1.25 r
+  u_datapath/u_reg_file/rf_reg_9__16_/D (DFFRBQX1AS7)
+                                                   0.00      1.25 r
+  data arrival time                                          1.25
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.44      0.44
+  u_datapath/u_reg_file/rf_reg_9__16_/CK (DFFRBQX1AS7)
+                                                   0.00      0.44 r
+  clock uncertainty                                0.30      0.74
+  library hold time                               -0.01      0.73
+  data required time                                         0.73
+  ------------------------------------------------------------------------
+  data required time                                         0.73
+  data arrival time                                         -1.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.52
+
+
+1

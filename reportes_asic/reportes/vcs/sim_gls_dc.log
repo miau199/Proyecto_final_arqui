@@ -1,0 +1,91 @@
+Command: /home/drueda/proyectofinal/riscv_asic/work/sim_gls_dc/./simv -l sim.log
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2-6_Full64; Runtime version X-2025.06-SP2-6_Full64;  Nov  4 19:29 2026
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202506.so
+FSDB Dumper for VCS, Release Verdi_Y-2026.03-SP2, Linux x86_64/64bit, 08/29/2026
+(C) 1996 - 2026 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'riscv_tb.fsdb'
+*Verdi* : Begin traversing the scope (riscv_tb), layer (0).
+*Verdi* : End of traversing.
+[   40 ns] PC = 0x00000000 | Instr = 0x00500093
+[   60 ns] PC = 0x00000004 | Instr = 0x00a00113
+[   80 ns] PC = 0x00000008 | Instr = 0x002081b3
+[  100 ns] PC = 0x0000000c | Instr = 0x40118233
+[  120 ns] PC = 0x00000010 | Instr = 0x0021f333
+[  140 ns] PC = 0x00000014 | Instr = 0x0020e3b3
+[  160 ns] PC = 0x00000018 | Instr = 0x0011c433
+[  180 ns] PC = 0x0000001c | Instr = 0x0020a4b3
+[  200 ns] PC = 0x00000020 | Instr = 0x00909533
+[  220 ns] PC = 0x00000024 | Instr = 0x009155b3
+[  240 ns] PC = 0x00000028 | Instr = 0xff800613
+[  260 ns] PC = 0x0000002c | Instr = 0x409656b3
+[  280 ns] PC = 0x00000030 | Instr = 0x00c0b733
+[  300 ns] PC = 0x00000034 | Instr = 0x00c0a7b3
+[  320 ns] PC = 0x00000038 | Instr = 0x0061f813
+[  340 ns] PC = 0x0000003c | Instr = 0x0100e893
+[  360 ns] PC = 0x00000040 | Instr = 0x00062913
+[  380 ns] PC = 0x00000044 | Instr = 0x123459b7
+[  400 ns] PC = 0x00000048 | Instr = 0x00800a13
+[  420 ns] PC = 0x0000004c | Instr = 0x004a2023
+[DMEM WRITE] t=430 ns  Addr: 0x00000008 (Word: 2) <= Data: 0x0000000a (10)
+[  440 ns] PC = 0x00000050 | Instr = 0x013a2223
+[DMEM WRITE] t=450 ns  Addr: 0x0000000c (Word: 3) <= Data: 0x12345000 (305418240)
+[  460 ns] PC = 0x00000054 | Instr = 0x000a2283
+[  480 ns] PC = 0x00000058 | Instr = 0x00428463
+[  500 ns] PC = 0x00000060 | Instr = 0x00429463
+[  520 ns] PC = 0x00000064 | Instr = 0x00100b13
+[  540 ns] PC = 0x00000068 | Instr = 0x00209463
+[  560 ns] PC = 0x00000070 | Instr = 0x00208463
+[  580 ns] PC = 0x00000074 | Instr = 0x00200c13
+[  600 ns] PC = 0x00000078 | Instr = 0x00800cef
+[  620 ns] PC = 0x00000080 | Instr = 0x00cc8de7
+[  640 ns] PC = 0x00000088 | Instr = 0x00700e93
+[  660 ns] PC = 0x0000008c | Instr = 0x005ecf13
+[  680 ns] PC = 0x00000090 | Instr = 0x40265f93
+
+===== Verificacion de resultados (33 ciclos) =====
+  [ OK ] x1 = 0x00000005
+  [ OK ] x2 = 0x0000000a
+  [ OK ] x3 = 0x0000000f
+  [ OK ] x4 = 0x0000000a
+  [ OK ] x5 = 0x0000000a
+  [ OK ] x6 = 0x0000000a
+  [ OK ] x7 = 0x0000000f
+  [ OK ] x8 = 0x0000000a
+  [ OK ] x9 = 0x00000001
+  [ OK ] x10 = 0x0000000a
+  [ OK ] x11 = 0x00000005
+  [ OK ] x12 = 0xfffffff8
+  [ OK ] x13 = 0xfffffffc
+  [ OK ] x14 = 0x00000001
+  [ OK ] x15 = 0x00000000
+  [ OK ] x16 = 0x00000006
+  [ OK ] x17 = 0x00000015
+  [ OK ] x18 = 0x00000001
+  [ OK ] x19 = 0x12345000
+  [ OK ] x20 = 0x00000008
+  [ OK ] x21 = 0x00000000
+  [ OK ] x22 = 0x00000001
+  [ OK ] x23 = 0x00000000
+  [ OK ] x24 = 0x00000002
+  [ OK ] x25 = 0x0000007c
+  [ OK ] x26 = 0x00000000
+  [ OK ] x27 = 0x00000084
+  [ OK ] x28 = 0x00000000
+  [ OK ] x29 = 0x00000007
+  [ OK ] x30 = 0x00000002
+  [ OK ] x31 = 0xfffffffe
+  [ OK ] mem[2] = 0x0000000a
+  [ OK ] mem[3] = 0x12345000
+==================================================
+  RESULTADO: PASS  (33/33 verificaciones correctas)
+==================================================
+
+$finish called from file "/home/drueda/proyectofinal/riscv_asic/tb/riscv_tb.sv", line 155.
+$finish at simulation time  1070 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1070000 ps
+CPU Time:      0.420 seconds;       Data structure size:   2.6Mb
+Wed Nov  4 19:29:23 2026

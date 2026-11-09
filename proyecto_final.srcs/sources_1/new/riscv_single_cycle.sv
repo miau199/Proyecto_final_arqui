@@ -1,30 +1,37 @@
 `timescale 1ns / 1ps
-
+//==============================================================
+// riscv_single_cycle.sv - Top del nucleo (Control Unit + Datapath)
+//   Las memorias quedan fuera del nucleo (interfaz IMEM / DMEM).
+//   Este es el modulo que se sintetiza en Design Compiler / ICC2.
+//==============================================================
 module riscv_single_cycle (
     input  logic        clk_i,
     input  logic        rst_ni,
 
-    // Interfaz con Memoria de Instrucciones (ROM/IMEM)[cite: 17]
+    // Memoria de instrucciones
     output logic [31:0] imem_addr_o,
     input  logic [31:0] instr_i,
 
-    // Interfaz con Memoria de Datos (RAM/DMEM)[cite: 17]
+    // Memoria de datos
     output logic [31:0] dmem_addr_o,
     output logic [31:0] dmem_wdata_o,
     output logic        dmem_we_o,
-    input  logic [31:0] dmem_rdata_i
+    input  logic [31:0] dmem_rdata_i,
+
+    // Depuracion: lectura de un registro arbitrario
+    input  logic [4:0]  dbg_raddr_i,
+    output logic [31:0] dbg_rdata_o
 );
 
-  // Cables de interconexión Control <-> Datapath[cite: 17]
   logic       reg_write;
   logic [2:0] imm_src;
   logic       alu_src;
   logic [1:0] result_src;
   logic       branch;
   logic       jump;
+  logic       jalr;
   logic [3:0] alu_ctrl;
 
-  // Instanciación de la Unidad de Control[cite: 17]
   control_unit u_control_unit (
       .opcode_i     (instr_i[6:0]),
       .funct3_i     (instr_i[14:12]),
@@ -36,10 +43,10 @@ module riscv_single_cycle (
       .result_src_o (result_src),
       .branch_o     (branch),
       .jump_o       (jump),
+      .jalr_o       (jalr),
       .alu_ctrl_o   (alu_ctrl)
   );
 
-  // Instanciación del Datapath[cite: 17]
   datapath u_datapath (
       .clk_i        (clk_i),
       .rst_ni       (rst_ni),
@@ -49,12 +56,15 @@ module riscv_single_cycle (
       .result_src_i (result_src),
       .branch_i     (branch),
       .jump_i       (jump),
+      .jalr_i       (jalr),
       .alu_ctrl_i   (alu_ctrl),
       .pc_o         (imem_addr_o),
       .instr_i      (instr_i),
       .alu_result_o (dmem_addr_o),
       .write_data_o (dmem_wdata_o),
-      .read_data_i  (dmem_rdata_i)
+      .read_data_i  (dmem_rdata_i),
+      .dbg_raddr_i  (dbg_raddr_i),
+      .dbg_rdata_o  (dbg_rdata_o)
   );
 
 endmodule

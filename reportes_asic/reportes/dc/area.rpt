@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : area
+Design : riscv_single_cycle
+Version: X-2025.06-SP5-5
+Date   : Wed Nov  4 19:16:32 2026
+****************************************
+
+Library(s) Used:
+
+    M31LLSC733GL150MS_25CTT3P3_ctyp_nldm (File: /home/drueda/proyectofinal/riscv_asic/libs/m31/M31LLSC733GL150MS_25CTT3P3_ctyp_nldm.db)
+
+Number of ports:                          751
+Number of nets:                          6863
+Number of cells:                         6220
+Number of combinational cells:           5191
+Number of sequential cells:              1024
+Number of macros/black boxes:               0
+Number of buf/inv:                        730
+Number of references:                       2
+
+Combinational area:              60583.218863
+Buf/Inv area:                     3925.555145
+Noncombinational area:           44590.695312
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                105173.914176
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  --------------------  ------------------------------ 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes   Design
+--------------------------------  -----------  -------  ----------  ----------  ------  ------------
+riscv_single_cycle                105173.9142    100.0      0.0000      0.0000  0.0000  riscv_single_cycle
+u_control_unit                       395.1360      0.4    395.1360      0.0000  0.0000  control_unit
+u_datapath                        104778.7782     99.6   4520.6784   1393.4592  0.0000  datapath
+u_datapath/u_alu                   11026.7137     10.5  11026.7137      0.0000  0.0000  alu
+u_datapath/u_imm_extend              546.7392      0.5    546.7392      0.0000  0.0000  imm_extend
+u_datapath/u_reg_file              87291.1877     83.0  44093.9516  43197.2361  0.0000  reg_file
+--------------------------------  -----------  -------  ----------  ----------  ------  ------------
+Total                                                   60583.2189  44590.6953  0.0000
+
+1

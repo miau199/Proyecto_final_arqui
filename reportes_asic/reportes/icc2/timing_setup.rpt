@@ -1,0 +1,833 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+Design : riscv_single_cycle
+Version: Y-2026.03-SP2
+Date   : Wed Nov  4 19:49:22 2026
+****************************************
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: dmem_addr_o[30] (output port clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/S (FAX1AS7)                0.60     15.48 r
+  u_datapath/u_alu/U11/O (AOI12X1AS7)              0.13     15.61 f
+  u_datapath/u_alu/U6/O (INVX2AS7)                 0.55     16.16 r
+  dmem_addr_o[30] (out)                            0.00     16.16 r
+  data arrival time                                         16.16
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.47     20.47
+  clock uncertainty                               -0.30     20.17
+  output external delay                           -4.00     16.17
+  data required time                                        16.17
+  ------------------------------------------------------------------------
+  data required time                                        16.17
+  data arrival time                                        -16.16
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: instr_i[3] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_31_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 f
+  instr_i[3] (in)                                  0.07      4.54 f
+  u_control_unit/U11/O (NOR2X1AS7)                 0.16      4.71 r
+  u_control_unit/U13/O (NAND3X1AS7)                0.18      4.89 f
+  u_control_unit/U16/O (NOR2X1AS7)                 0.37      5.25 r
+  u_control_unit/U42/O (NAND2X1AS7)                0.19      5.44 f
+  u_control_unit/ctmTdsLR_1_1810/O (NAND2X2AS7)    0.32      5.77 r
+  u_datapath/u_imm_extend/U7/O (NAND2X2AS7)        0.17      5.93 f
+  u_datapath/u_imm_extend/U8/O (NAND2X1AS7)        0.18      6.12 r
+  u_datapath/u_imm_extend/U12/O (NOR2X1AS7)        0.13      6.25 f
+  u_datapath/u_imm_extend/U21/O (OAI22B2X2AS7)     0.31      6.56 f
+  u_datapath/U221/O (CLKINVX1AS7)                  0.14      6.70 r
+  u_datapath/U241/O (NAND2X1AS7)                   0.13      6.83 f
+  u_datapath/U247/O (AOI12X1AS7)                   0.35      7.18 r
+  u_datapath/U313/O (OAI22B2X2AS7)                 0.12      7.30 f
+  u_datapath/intadd_0_U29/CO (FAX1AS7)             0.42      7.72 f
+  u_datapath/intadd_0_U28/CO (FAX1AS7)             0.43      8.15 f
+  u_datapath/intadd_0_U27/CO (FAX1AS7)             0.43      8.58 f
+  u_datapath/intadd_0_U26/CO (FAX1AS7)             0.43      9.00 f
+  u_datapath/intadd_0_U25/CO (FAX1AS7)             0.44      9.45 f
+  u_datapath/intadd_0_U24/CO (FAX1AS7)             0.44      9.89 f
+  u_datapath/intadd_0_U23/CO (FAX1AS7)             0.46     10.34 f
+  u_datapath/intadd_0_U22/CO (FAX1AS7)             0.46     10.81 f
+  u_datapath/intadd_0_U21/CO (FAX1AS7)             0.46     11.26 f
+  u_datapath/intadd_0_U20/CO (FAX1AS7)             0.43     11.70 f
+  u_datapath/intadd_0_U19/CO (FAX1AS7)             0.43     12.13 f
+  u_datapath/intadd_0_U18/CO (FAX1AS7)             0.43     12.56 f
+  u_datapath/intadd_0_U17/CO (FAX1AS7)             0.42     12.98 f
+  u_datapath/intadd_0_U16/CO (FAX1AS7)             0.44     13.42 f
+  u_datapath/intadd_0_U15/CO (FAX1AS7)             0.42     13.84 f
+  u_datapath/intadd_0_U14/CO (FAX1AS7)             0.42     14.26 f
+  u_datapath/intadd_0_U13/CO (FAX1AS7)             0.46     14.72 f
+  u_datapath/intadd_0_U12/CO (FAX1AS7)             0.47     15.19 f
+  u_datapath/intadd_0_U11/CO (FAX1AS7)             0.43     15.63 f
+  u_datapath/intadd_0_U10/CO (FAX1AS7)             0.42     16.05 f
+  u_datapath/intadd_0_U9/CO (FAX1AS7)              0.45     16.50 f
+  u_datapath/intadd_0_U8/CO (FAX1AS7)              0.44     16.95 f
+  u_datapath/intadd_0_U7/CO (FAX1AS7)              0.43     17.38 f
+  u_datapath/intadd_0_U6/CO (FAX1AS7)              0.43     17.81 f
+  u_datapath/intadd_0_U5/CO (FAX1AS7)              0.42     18.24 f
+  u_datapath/intadd_0_U4/CO (FAX1AS7)              0.45     18.68 f
+  u_datapath/intadd_0_U3/CO (FAX1AS7)              0.43     19.11 f
+  u_datapath/intadd_0_U2/CO (FAX1AS7)              0.41     19.53 f
+  u_datapath/U317/O (XNOR3X1AS7)                   0.31     19.84 r
+  u_datapath/ctmTdsLR_4_335/O (OAI12X1AS7)         0.13     19.97 f
+  u_datapath/pc_o_reg_31_/D (DFFRBQX2AS7)          0.00     19.97 f
+  data arrival time                                         19.97
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.71     20.71
+  u_datapath/pc_o_reg_31_/CK (DFFRBQX2AS7)         0.00     20.71 r
+  clock uncertainty                               -0.30     20.41
+  library setup time                              -0.43     19.99
+  data required time                                        19.99
+  ------------------------------------------------------------------------
+  data required time                                        19.99
+  data arrival time                                        -19.97
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: dmem_addr_o[29] (output port clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.68 r
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.11      8.80 f
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.35      9.14 r
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.14      9.28 f
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.36      9.64 r
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.14      9.77 f
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.23     10.00 r
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.14     10.14 f
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.27     10.42 r
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.14     10.56 f
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.25     10.80 r
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.13     10.93 f
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.27     11.20 r
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.10     11.30 f
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.16     11.46 r
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.13     11.59 f
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.23     11.82 r
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.12     11.94 f
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.27     12.22 r
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.13     12.34 f
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.24     12.58 r
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.14     12.72 f
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.87 r
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.13     12.99 f
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.21     13.21 r
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.13     13.34 f
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.19     13.53 r
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.33     13.86 r
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.32     14.18 r
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.33     14.51 r
+  u_datapath/u_alu/U928/S (FAX1AS7)                0.62     15.13 r
+  u_datapath/u_alu/U14/O (INVX1AS7)                0.09     15.22 f
+  u_datapath/u_alu/U13/O (OAI112X2AS7)             0.90     16.13 r
+  dmem_addr_o[29] (out)                            0.00     16.13 r
+  data arrival time                                         16.13
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.47     20.47
+  clock uncertainty                               -0.30     20.17
+  output external delay                           -4.00     16.17
+  data required time                                        16.17
+  ------------------------------------------------------------------------
+  data required time                                        16.17
+  data arrival time                                        -16.13
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.04
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: dmem_addr_o[31] (output port clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/CO (FAX1AS7)               0.41     15.30 f
+  u_datapath/u_alu/ctmTdsLR_1_405/O (NAND2X1AS7)   0.12     15.41 r
+  u_datapath/u_alu/ctmTdsLR_2_406/O (OAI112X1AS7)
+                                                   0.17     15.58 f
+  u_datapath/u_alu/ctmTdsLR_4_378/O (NAND2X2AS7)   0.55     16.13 r
+  dmem_addr_o[31] (out)                            0.00     16.13 r
+  data arrival time                                         16.13
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.47     20.47
+  clock uncertainty                               -0.30     20.17
+  output external delay                           -4.00     16.17
+  data required time                                        16.17
+  ------------------------------------------------------------------------
+  data required time                                        16.17
+  data arrival time                                        -16.13
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.04
+
+
+
+  Startpoint: instr_i[3] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_30_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 f
+  instr_i[3] (in)                                  0.07      4.54 f
+  u_control_unit/U11/O (NOR2X1AS7)                 0.16      4.71 r
+  u_control_unit/U13/O (NAND3X1AS7)                0.18      4.89 f
+  u_control_unit/U16/O (NOR2X1AS7)                 0.37      5.25 r
+  u_control_unit/U42/O (NAND2X1AS7)                0.19      5.44 f
+  u_control_unit/ctmTdsLR_1_1810/O (NAND2X2AS7)    0.32      5.77 r
+  u_datapath/u_imm_extend/U7/O (NAND2X2AS7)        0.17      5.93 f
+  u_datapath/u_imm_extend/U8/O (NAND2X1AS7)        0.18      6.12 r
+  u_datapath/u_imm_extend/U12/O (NOR2X1AS7)        0.13      6.25 f
+  u_datapath/u_imm_extend/U21/O (OAI22B2X2AS7)     0.31      6.56 f
+  u_datapath/U221/O (CLKINVX1AS7)                  0.14      6.70 r
+  u_datapath/U241/O (NAND2X1AS7)                   0.13      6.83 f
+  u_datapath/U247/O (AOI12X1AS7)                   0.35      7.18 r
+  u_datapath/U313/O (OAI22B2X2AS7)                 0.12      7.30 f
+  u_datapath/intadd_0_U29/CO (FAX1AS7)             0.42      7.72 f
+  u_datapath/intadd_0_U28/CO (FAX1AS7)             0.43      8.15 f
+  u_datapath/intadd_0_U27/CO (FAX1AS7)             0.43      8.58 f
+  u_datapath/intadd_0_U26/CO (FAX1AS7)             0.43      9.00 f
+  u_datapath/intadd_0_U25/CO (FAX1AS7)             0.44      9.45 f
+  u_datapath/intadd_0_U24/CO (FAX1AS7)             0.44      9.89 f
+  u_datapath/intadd_0_U23/CO (FAX1AS7)             0.46     10.34 f
+  u_datapath/intadd_0_U22/CO (FAX1AS7)             0.46     10.81 f
+  u_datapath/intadd_0_U21/CO (FAX1AS7)             0.46     11.26 f
+  u_datapath/intadd_0_U20/CO (FAX1AS7)             0.43     11.70 f
+  u_datapath/intadd_0_U19/CO (FAX1AS7)             0.43     12.13 f
+  u_datapath/intadd_0_U18/CO (FAX1AS7)             0.43     12.56 f
+  u_datapath/intadd_0_U17/CO (FAX1AS7)             0.42     12.98 f
+  u_datapath/intadd_0_U16/CO (FAX1AS7)             0.44     13.42 f
+  u_datapath/intadd_0_U15/CO (FAX1AS7)             0.42     13.84 f
+  u_datapath/intadd_0_U14/CO (FAX1AS7)             0.42     14.26 f
+  u_datapath/intadd_0_U13/CO (FAX1AS7)             0.46     14.72 f
+  u_datapath/intadd_0_U12/CO (FAX1AS7)             0.47     15.19 f
+  u_datapath/intadd_0_U11/CO (FAX1AS7)             0.43     15.63 f
+  u_datapath/intadd_0_U10/CO (FAX1AS7)             0.42     16.05 f
+  u_datapath/intadd_0_U9/CO (FAX1AS7)              0.45     16.50 f
+  u_datapath/intadd_0_U8/CO (FAX1AS7)              0.44     16.95 f
+  u_datapath/intadd_0_U7/CO (FAX1AS7)              0.43     17.38 f
+  u_datapath/intadd_0_U6/CO (FAX1AS7)              0.43     17.81 f
+  u_datapath/intadd_0_U5/CO (FAX1AS7)              0.42     18.24 f
+  u_datapath/intadd_0_U4/CO (FAX1AS7)              0.45     18.68 f
+  u_datapath/intadd_0_U3/CO (FAX1AS7)              0.43     19.11 f
+  u_datapath/intadd_0_U2/S (FAX1AS7)               0.55     19.66 f
+  u_datapath/ctmTdsLR_2_370/O (NAND2B1X1AS7)       0.12     19.78 r
+  u_datapath/ctmTdsLR_3_371/O (NAND2B1X1AS7)       0.12     19.90 f
+  u_datapath/pc_o_reg_30_/D (DFFRBQX1AS7)          0.00     19.90 f
+  data arrival time                                         19.90
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.71     20.71
+  u_datapath/pc_o_reg_30_/CK (DFFRBQX1AS7)         0.00     20.71 r
+  clock uncertainty                               -0.30     20.41
+  library setup time                              -0.42     20.00
+  data required time                                        20.00
+  ------------------------------------------------------------------------
+  data required time                                        20.00
+  data arrival time                                        -19.90
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.10
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_19_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/S (FAX1AS7)                0.55     15.43 f
+  u_datapath/u_alu/U11/O (AOI12X1AS7)              0.25     15.68 r
+  u_datapath/u_alu/U6/O (INVX2AS7)                 0.33     16.01 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)              0.47     16.48 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)             0.37     16.85 r
+  u_datapath/u_alu/ctmTdsLR_2_1790/O (NAND4X1AS7)
+                                                   0.20     17.05 f
+  u_datapath/u_alu/ctmTdsLR_1_1789/O (CLKINVX1AS7)
+                                                   0.22     17.28 r
+  u_datapath/ctmTdsLR_1_1192/OB (MUX2BX1AS7)       0.22     17.50 f
+  u_datapath/ctmTdsLR_2_1800/O (NAND2X1AS7)        0.12     17.62 r
+  u_datapath/ctmTdsLR_1_1799/O (AND2X2AS7)         0.40     18.02 r
+  u_datapath/U235/O (INVX1AS7)                     0.13     18.15 f
+  u_datapath/U252/O (NAND2X1AS7)                   0.34     18.49 r
+  u_datapath/U10/O (INVX1AS7)                      0.58     19.08 f
+  u_datapath/U283/O (AOI22X1AS7)                   0.41     19.49 r
+  u_datapath/U284/O (OAI12X1AS7)                   0.20     19.69 f
+  u_datapath/pc_o_reg_19_/D (DFFRBQX1AS7)          0.00     19.69 f
+  data arrival time                                         19.69
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.61     20.61
+  u_datapath/pc_o_reg_19_/CK (DFFRBQX1AS7)         0.00     20.61 r
+  clock uncertainty                               -0.30     20.31
+  library setup time                              -0.50     19.81
+  data required time                                        19.81
+  ------------------------------------------------------------------------
+  data required time                                        19.81
+  data arrival time                                        -19.69
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.12
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_18_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/S (FAX1AS7)                0.55     15.43 f
+  u_datapath/u_alu/U11/O (AOI12X1AS7)              0.25     15.68 r
+  u_datapath/u_alu/U6/O (INVX2AS7)                 0.33     16.01 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)              0.47     16.48 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)             0.37     16.85 r
+  u_datapath/u_alu/ctmTdsLR_2_1790/O (NAND4X1AS7)
+                                                   0.20     17.05 f
+  u_datapath/u_alu/ctmTdsLR_1_1789/O (CLKINVX1AS7)
+                                                   0.22     17.28 r
+  u_datapath/ctmTdsLR_1_1192/OB (MUX2BX1AS7)       0.22     17.50 f
+  u_datapath/ctmTdsLR_2_1800/O (NAND2X1AS7)        0.12     17.62 r
+  u_datapath/ctmTdsLR_1_1799/O (AND2X2AS7)         0.40     18.02 r
+  u_datapath/U235/O (INVX1AS7)                     0.13     18.15 f
+  u_datapath/U252/O (NAND2X1AS7)                   0.34     18.49 r
+  u_datapath/U10/O (INVX1AS7)                      0.58     19.08 f
+  u_datapath/U281/O (AOI22X1AS7)                   0.39     19.47 r
+  u_datapath/U282/O (OAI12X1AS7)                   0.18     19.65 f
+  u_datapath/pc_o_reg_18_/D (DFFRBQX1AS7)          0.00     19.65 f
+  data arrival time                                         19.65
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.61     20.61
+  u_datapath/pc_o_reg_18_/CK (DFFRBQX1AS7)         0.00     20.61 r
+  clock uncertainty                               -0.30     20.31
+  library setup time                              -0.50     19.81
+  data required time                                        19.81
+  ------------------------------------------------------------------------
+  data required time                                        19.81
+  data arrival time                                        -19.65
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.16
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_11_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/S (FAX1AS7)                0.55     15.43 f
+  u_datapath/u_alu/U11/O (AOI12X1AS7)              0.25     15.68 r
+  u_datapath/u_alu/U6/O (INVX2AS7)                 0.33     16.01 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)              0.47     16.48 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)             0.37     16.85 r
+  u_datapath/u_alu/ctmTdsLR_2_1790/O (NAND4X1AS7)
+                                                   0.20     17.05 f
+  u_datapath/u_alu/ctmTdsLR_1_1789/O (CLKINVX1AS7)
+                                                   0.22     17.28 r
+  u_datapath/ctmTdsLR_1_1192/OB (MUX2BX1AS7)       0.22     17.50 f
+  u_datapath/ctmTdsLR_2_1800/O (NAND2X1AS7)        0.12     17.62 r
+  u_datapath/ctmTdsLR_1_1799/O (AND2X2AS7)         0.40     18.02 r
+  u_datapath/U235/O (INVX1AS7)                     0.13     18.15 f
+  u_datapath/U252/O (NAND2X1AS7)                   0.34     18.49 r
+  u_datapath/U10/O (INVX1AS7)                      0.58     19.08 f
+  u_datapath/U267/O (AOI22X1AS7)                   0.42     19.49 r
+  u_datapath/U268/O (OAI12X1AS7)                   0.15     19.65 f
+  u_datapath/pc_o_reg_11_/D (DFFRBQX1AS7)          0.00     19.65 f
+  data arrival time                                         19.65
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.61     20.61
+  u_datapath/pc_o_reg_11_/CK (DFFRBQX1AS7)         0.00     20.61 r
+  clock uncertainty                               -0.30     20.31
+  library setup time                              -0.49     19.82
+  data required time                                        19.82
+  ------------------------------------------------------------------------
+  data required time                                        19.82
+  data arrival time                                        -19.65
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.17
+
+
+
+  Startpoint: instr_i[23] (input port clocked by clk)
+  Endpoint: u_datapath/pc_o_reg_20_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[23] (in)                                 0.29      4.76 r
+  u_datapath/u_reg_file/U8/O (CLKINVX1AS7)         0.35      5.11 f
+  u_datapath/u_reg_file/U24/O (NAND3X2AS7)         0.29      5.40 r
+  u_datapath/u_reg_file/ctmTdsLR_1_1124/O (OR2X1AS7)
+                                                   0.23      5.63 r
+  u_datapath/u_reg_file/ctmTdsLR_2_1125/O (INVX3AS7)
+                                                   0.33      5.96 f
+  u_datapath/u_reg_file/U281/O (AOI22X1AS7)        0.40      6.36 r
+  u_datapath/u_reg_file/U282/O (NAND4X1AS7)        0.48      6.84 f
+  u_datapath/u_reg_file/U283/O (OR4X1AS7)          0.78      7.62 f
+  u_datapath/U3/O (MUX2X2AS7)                      0.65      8.28 f
+  u_datapath/u_alu/U42/O (XOR2X1AS7)               0.41      8.69 f
+  u_datapath/u_alu/U46/O (AOI12X2AS7)              0.20      8.89 r
+  u_datapath/u_alu/U48/O (OAI12X1AS7)              0.17      9.05 f
+  u_datapath/u_alu/U53/O (AOI12X2AS7)              0.23      9.29 r
+  u_datapath/u_alu/U57/O (OAI12X1AS7)              0.17      9.45 f
+  u_datapath/u_alu/U62/O (AOI12X2AS7)              0.23      9.68 r
+  u_datapath/u_alu/U66/O (OAI12X2AS7)              0.13      9.82 f
+  u_datapath/u_alu/U71/O (AOI12X2AS7)              0.24     10.06 r
+  u_datapath/u_alu/U75/O (OAI12X2AS7)              0.16     10.23 f
+  u_datapath/u_alu/U80/O (AOI12X4AS7)              0.22     10.45 r
+  u_datapath/u_alu/U84/O (OAI12X4AS7)              0.11     10.56 f
+  u_datapath/u_alu/U89/O (AOI12X4AS7)              0.20     10.76 r
+  u_datapath/u_alu/U23/O (OAI12X2AS7)              0.15     10.91 f
+  u_datapath/u_alu/ctmTdsLR_6_395/O (NAND2X2AS7)   0.12     11.03 r
+  u_datapath/u_alu/ctmTdsLR_1_390/O (NAND2B1X2AS7)
+                                                   0.13     11.16 f
+  u_datapath/u_alu/U24/O (AOI12X4AS7)              0.22     11.38 r
+  u_datapath/u_alu/U32/O (OAI12X4AS7)              0.11     11.49 f
+  u_datapath/u_alu/U112/O (AOI12X4AS7)             0.19     11.68 r
+  u_datapath/u_alu/U33/O (OAI12X2AS7)              0.15     11.83 f
+  u_datapath/u_alu/U120/O (AOI12X4AS7)             0.20     12.02 r
+  u_datapath/u_alu/U124/O (OAI12X2AS7)             0.13     12.15 f
+  u_datapath/u_alu/ctmTdsLR_3_381/O (NAND2X1AS7)   0.16     12.32 r
+  u_datapath/u_alu/ctmTdsLR_1_379/O (NAND3B1X2AS7)
+                                                   0.15     12.47 f
+  u_datapath/u_alu/U136/O (AOI12X2AS7)             0.24     12.71 r
+  u_datapath/u_alu/U27/O (OAI12X2AS7)              0.13     12.84 f
+  u_datapath/u_alu/U144/O (AOI12X2AS7)             0.24     13.08 r
+  u_datapath/u_alu/U28/O (OAI12X2AS7)              0.11     13.19 f
+  u_datapath/u_alu/U266/CO (FAX1AS7)               0.42     13.61 f
+  u_datapath/u_alu/U625/CO (FAX1AS7)               0.42     14.03 f
+  u_datapath/u_alu/U909/CO (FAX1AS7)               0.43     14.46 f
+  u_datapath/u_alu/U928/CO (FAX1AS7)               0.42     14.88 f
+  u_datapath/u_alu/U946/S (FAX1AS7)                0.55     15.43 f
+  u_datapath/u_alu/U11/O (AOI12X1AS7)              0.25     15.68 r
+  u_datapath/u_alu/U6/O (INVX2AS7)                 0.33     16.01 f
+  u_datapath/u_alu/U1092/O (OR4X1AS7)              0.47     16.48 f
+  u_datapath/u_alu/U1093/O (NOR4X1AS7)             0.37     16.85 r
+  u_datapath/u_alu/ctmTdsLR_2_1790/O (NAND4X1AS7)
+                                                   0.20     17.05 f
+  u_datapath/u_alu/ctmTdsLR_1_1789/O (CLKINVX1AS7)
+                                                   0.22     17.28 r
+  u_datapath/ctmTdsLR_1_1192/OB (MUX2BX1AS7)       0.22     17.50 f
+  u_datapath/ctmTdsLR_2_1800/O (NAND2X1AS7)        0.12     17.62 r
+  u_datapath/ctmTdsLR_1_1799/O (AND2X2AS7)         0.40     18.02 r
+  u_datapath/U235/O (INVX1AS7)                     0.13     18.15 f
+  u_datapath/U252/O (NAND2X1AS7)                   0.34     18.49 r
+  u_datapath/U10/O (INVX1AS7)                      0.58     19.08 f
+  u_datapath/U285/O (AOI22X1AS7)                   0.39     19.47 r
+  u_datapath/U286/O (OAI12X1AS7)                   0.17     19.64 f
+  u_datapath/pc_o_reg_20_/D (DFFRBQX1AS7)          0.00     19.64 f
+  data arrival time                                         19.64
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.61     20.61
+  u_datapath/pc_o_reg_20_/CK (DFFRBQX1AS7)         0.00     20.61 r
+  clock uncertainty                               -0.30     20.31
+  library setup time                              -0.49     19.82
+  data required time                                        19.82
+  ------------------------------------------------------------------------
+  data required time                                        19.82
+  data arrival time                                        -19.64
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.18
+
+
+
+  Startpoint: instr_i[22] (input port clocked by clk)
+  Endpoint: dmem_addr_o[0] (output port clocked by clk)
+  Mode: func
+  Corner: typ
+  Scenario: func_typ
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.47      0.47
+  input external delay                             4.00      4.47 r
+  instr_i[22] (in)                                 0.36      4.83 r
+  u_datapath/u_reg_file/U29/O (NOR2B1X1AS7)        0.28      5.11 r
+  u_datapath/u_reg_file/U30/O (NAND2X1AS7)         0.33      5.44 f
+  u_datapath/u_reg_file/U67/O (NOR2X4AS7)          0.91      6.36 r
+  u_datapath/u_reg_file/U295/O (AOI22X1AS7)        0.27      6.63 f
+  u_datapath/u_reg_file/U298/O (NAND4X1AS7)        0.40      7.02 r
+  u_datapath/u_reg_file/U304/O (OR4X1AS7)          0.32      7.34 r
+  u_datapath/U220/O (CLKINVX2AS7)                  0.18      7.52 f
+  u_datapath/U222/OB (MUX2BX4AS7)                  0.65      8.17 r
+  u_datapath/u_alu/U18/O (OR2X2AS7)                0.60      8.77 r
+  u_datapath/u_alu/HFSINV_2509_197/O (CLKINVX2AS7)
+                                                   0.97      9.73 f
+  u_datapath/u_alu/U1051/O (AOI112X1AS7)           0.64     10.37 r
+  u_datapath/u_alu/U1053/O (AOI22X1AS7)            0.20     10.57 f
+  u_datapath/u_alu/U1054/O (OAI22X1AS7)            0.31     10.88 r
+  u_datapath/u_alu/ctmTdsLR_9_367/O (OAI12B2X1AS7)
+                                                   0.25     11.13 r
+  u_datapath/u_alu/ctmTdsLR_1_411/O (OAI12X1AS7)   0.10     11.23 f
+  u_datapath/u_alu/ctmTdsLR_2_1580/O (OAI222X1AS7)
+                                                   0.36     11.59 r
+  u_datapath/u_alu/ctmTdsLR_1_1085/O (NAND2X1AS7)
+                                                   0.12     11.72 f
+  u_datapath/u_alu/ctmTdsLR_3_1087/O (OAI112X1AS7)
+                                                   0.14     11.85 r
+  u_datapath/u_alu/ctmTdsLR_5_1089/O (OAI122X1AS7)
+                                                   0.21     12.06 f
+  u_datapath/u_alu/U1064/O (OAI22X1AS7)            0.29     12.36 r
+  u_datapath/u_alu/ctmTdsLR_1_1230/O (OAI23X1AS7)
+                                                   0.19     12.55 f
+  u_datapath/u_alu/ctmTdsLR_2_1231/O (AOI12B2X1AS7)
+                                                   0.26     12.81 r
+  u_datapath/u_alu/ctmTdsLR_2_1794/O (NOR2X1AS7)   0.08     12.89 f
+  u_datapath/u_alu/ctmTdsLR_1_1793/O (OAI13X1AS7)
+                                                   0.51     13.40 r
+  u_datapath/u_alu/ctmTdsLR_2_1577/O (OAI122X1AS7)
+                                                   0.25     13.65 f
+  u_datapath/u_alu/U1075/O (OAI112X1AS7)           0.23     13.88 r
+  u_datapath/u_alu/ctmTdsLR_2_1772/O (OAI122X1AS7)
+                                                   0.21     14.09 f
+  u_datapath/u_alu/ctmTdsLR_2_1862/O (CLKINVX1AS7)
+                                                   0.11     14.20 r
+  u_datapath/u_alu/ctmTdsLR_1_1861/O (OAI22X1AS7)
+                                                   0.10     14.31 f
+  u_datapath/u_alu/ctmTdsLR_1_1190/O (NAND3B1X1AS7)
+                                                   0.14     14.44 r
+  u_datapath/u_alu/ctmTdsLR_2_1191/O (OAI112X1AS7)
+                                                   0.17     14.61 f
+  u_datapath/u_alu/U1080/O (OAI112X1AS7)           0.17     14.78 r
+  u_datapath/u_alu/ctmTdsLR_1_1784/O (OAI12X1AS7)
+                                                   0.15     14.93 f
+  u_datapath/u_alu/ctmTdsLR_1_1597/O (AND2X1AS7)   0.23     15.16 f
+  u_datapath/u_alu/U15/O (INVX1AS7)                0.82     15.98 r
+  dmem_addr_o[0] (out)                             0.01     15.99 r
+  data arrival time                                         15.99
+
+  clock clk (rise edge)                           20.00     20.00
+  clock network delay (propagated)                 0.47     20.47
+  clock uncertainty                               -0.30     20.17
+  output external delay                           -4.00     16.17
+  data required time                                        16.17
+  ------------------------------------------------------------------------
+  data required time                                        16.17
+  data arrival time                                        -15.99
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.18
+
+
+1

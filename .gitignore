@@ -1,0 +1,49 @@
+# ==============================================================
+# Proyecto final RISC-V - solo se versiona lo necesario
+# ==============================================================
+
+# --- Librerias y PDK (archivos grandes y con licencia de GF / M31) ---
+*.zip
+*.tar.gz
+*.tgz
+riscv_asic/
+
+# --- Repositorio anidado vacio ---
+proyecto_final/
+
+# --- Vivado: carpetas generadas (se regeneran al abrir/correr el proyecto) ---
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+.Xil/
+NA/
+
+# --- Vivado: logs, journals y respaldos ---
+*.jou
+*.log
+*.str
+*.backup.*
+vivado*.backup.*
+vivado_pid*.str
+webtalk*
+*.wdb
+*.pb
+
+# --- Documentos personales (no son entregables) ---
+Guia_Estudio_RISCV.docx
+Guia_Demo_Comandos.docx
+~$*.docx
+
+# --- Sistema operativo / editores ---
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/
+
+# --- Excepcion: conservar los logs de simulacion de VCS (evidencia PASS) ---
+!reportes_asic/reportes/vcs/*.log

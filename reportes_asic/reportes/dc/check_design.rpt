@@ -1,0 +1,31 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP5-5
+Date:        Wed Nov  4 19:14:30 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      7
+    Unconnected ports (LINT-28)                                     7
+
+Cells                                                               7
+    Cells do not drive (LINT-1)                                     7
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu', cell 'B_11' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_13' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_15' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'datapath', port 'instr_i[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'datapath', port 'instr_i[0]' is not connected to any nets. (LINT-28)
+1

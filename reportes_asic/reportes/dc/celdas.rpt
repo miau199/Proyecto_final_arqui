@@ -1,0 +1,286 @@
+ 
+****************************************
+Report : reference
+Design : riscv_single_cycle
+Version: X-2025.06-SP5-5
+Date   : Wed Nov  4 19:16:33 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+control_unit                    395.135998       1    395.135998  h
+datapath                      104778.778178
+                                                 1  104778.778178 h, n
+-----------------------------------------------------------------------------
+Total 2 references                                  105173.914176
+
+****************************************
+Design: control_unit 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       2     19.353600  
+AOI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       3     29.030399  
+AOI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600       2     22.579201  
+INVX1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  4.838400      14     67.737598  
+NAND2B1X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       6     48.384001  
+NAND3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       7     67.737598  
+NOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       8     64.512001  
+NOR4B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+OAI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+OAI112X2AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 22.579201       1     22.579201  
+OR2X1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+-----------------------------------------------------------------------------
+Total 12 references                                   395.135998
+
+****************************************
+Design: datapath 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       4     38.707199  
+AOI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200      24    348.364792  
+AOI22X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400      55    709.632001  
+CLKBUFX1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       4     32.256001  
+CLKBUFX2AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+DFFRBQX1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 43.545601      32   1393.459229  n
+FAX1AS7            M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 38.707199      28   1083.801575  r
+INVX1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  4.838400      87    420.940790  
+MUX2BX1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       3     43.545599  
+MUX2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801       7    124.185606  
+NAND2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000      58    467.712008  
+NAND3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000      17    137.088002  
+OAI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      49    474.163189  
+OAI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+OAI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600      32    361.267212  
+OAI222X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 19.353600       6    116.121597  
+XNOR2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801       2     35.481602  
+XNOR3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 30.643200       1     30.643200  
+XOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801       3     53.222403  
+alu                           11026.713656       1  11026.713656  h
+imm_extend                      546.739195       1    546.739195  h
+reg_file                      87291.187725       1  87291.187725  h, n
+-----------------------------------------------------------------------------
+Total 24 references                                 104778.778178
+
+****************************************
+Design: alu 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       4     38.707199  
+AND3X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       3     38.707200  
+AND4X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+AOI12B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       2     25.804800  
+AOI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      79    764.467182  
+AOI12X2AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801       6    106.444805  
+AOI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       6     87.091198  
+AOI22X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400      69    890.265601  
+AOI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600      50    564.480019  
+AOI122X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       6     87.091198  
+AOI222X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 19.353600      11    212.889595  
+BUFX2AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+CLKBUFX1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       2     16.128000  
+FAX1AS7            M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 38.707199       5    193.535995  r
+INVX1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  4.838400     184    890.265579  
+INVX2AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       1      8.064000  
+INVX3AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       2     19.353600  
+MUX2BX1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       4     58.060799  
+NAND2B1X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       6     58.060799  
+NAND2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000     191   1540.224025  
+NAND2X2AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       1     12.902400  
+NAND3B1X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+NAND3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      22    212.889595  
+NAND4B1X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       4     58.060799  
+NAND4X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       5     64.512000  
+NOR2B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       6     58.060799  
+NOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000      76    612.864010  
+NOR3X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       5     48.383999  
+NOR4B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+NOR4X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       7     90.316800  
+OAI12B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       9    116.121600  
+OAI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      89    861.235180  
+OAI12X2AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801       4     70.963203  
+OAI13X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       5     64.512000  
+OAI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       6     87.091198  
+OAI22X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400      43    554.803201  
+OAI23X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+OAI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600      86    970.905632  
+OAI112X2AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 22.579201       2     45.158401  
+OAI112X4AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 41.932800       1     41.932800  
+OAI122X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       4     58.060799  
+OAI222X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 19.353600       3     58.060799  
+OR2X1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      15    145.151997  
+OR2X2AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       1     12.902400  
+OR4X1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       1     14.515200  
+XNOR2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801      14    248.371212  
+XOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 17.740801      48    851.558441  
+-----------------------------------------------------------------------------
+Total 47 references                                 11026.713656
+
+****************************************
+Design: imm_extend 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+AOI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600       1     11.289600  
+INVX1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  4.838400      18     87.091198  
+NAND2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       7     56.448001  
+NAND3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       1      9.676800  
+NOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000       7     56.448001  
+OAI12B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       8    103.219200  
+OAI12X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      15    145.151997  
+OAI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200       4     58.060799  
+-----------------------------------------------------------------------------
+Total 10 references                                   546.739195
+
+****************************************
+Design: reg_file 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       8     77.414398  
+AND2X2AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400       8    103.219200  
+AND4X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200      64    928.972778  
+AOI22B2X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200     744  10799.308548  
+AOI22X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400    1440  18579.456024  
+AOI112X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 11.289600      32    361.267212  
+CLKBUFX1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000     109    878.976014  
+DFFRBQX1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 43.545601     992  43197.236084  n
+INVX1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  4.838400     307   1485.388765  
+MUX2BX1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200     248   3599.769516  
+NAND2B1X1AS7       M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       2     19.353600  
+NAND2X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000      86    693.504011  
+NAND3X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800      86    832.204781  
+NAND4X1AS7         M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400     288   3715.891205  
+NOR2B1X1AS7        M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  9.676800       4     38.707199  
+NOR2X1AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                  8.064000      84    677.376011  
+NOR2X2AS7          M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 12.902400      29    374.169600  
+OR4X1AS7           M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+                                 14.515200      64    928.972778  
+-----------------------------------------------------------------------------
+Total 18 references                                 87291.187725
+1
